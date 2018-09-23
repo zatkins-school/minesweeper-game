@@ -192,6 +192,5 @@ function win(cols, rows, multi_array, flags){
 	* @post: alerts user that the game is over
 	*/
 function lose(){
-	window.alert("You lose!");
-	document.location.reload(true);
+	
 }

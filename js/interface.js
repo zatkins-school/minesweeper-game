@@ -16,6 +16,7 @@ let rows=0;
 let mines=0;
 let width=30;
 let flags=0;
+let gameover,win = false;
 
 /** ------------ P5 interface ------------ */
 /** Creates a canvas with a 2D array according to the input
@@ -68,7 +69,7 @@ function setup() {
 
     /** Populates the count of each box in the grid */
     generate_playing_field(mines, rows, cols, grid);
-
+    draw();
 }
 
 /** Draws the canvas on the site by calling the show function on each box
@@ -77,11 +78,19 @@ function setup() {
     * @return none
     */
 function draw() {
-  for (let c = 0; c < cols; c++) {
-    for (let r = 0; r < rows; r++) {
-      grid[c][r].show();
+    for (let c = 0; c < cols; c++) {
+        for (let r = 0; r < rows; r++) {
+        grid[c][r].show();
+        }
     }
-  }
+    if (gameover) {
+        if (win) {
+            window.alert("You win!");
+        }
+        else {
+            window.alert("You lose.");
+        }
+    }
 }
 
 /** ------------ Helper Functions ------------ */
@@ -93,11 +102,11 @@ function draw() {
  * @return  {array} 2D array with the the numbers of cols and rows
  */
 function create2DArray(cols,rows){
-  let grid = new Array(cols);
-  for (let c=0; c<cols; c++){
-    grid[c] = new Array(rows);
-  }
-  return grid;
+    let grid = new Array(cols);
+    for (let c=0; c<cols; c++){
+        grid[c] = new Array(rows);
+    }
+    return grid;
 }
 
 
@@ -112,37 +121,37 @@ function flag(x,y) {
         return;
     }
     if (grid[x][y].flagged){
-            grid[x][y].flagged=false;
-            flags = flags + 1;
+        grid[x][y].flagged=false;
+        flags = flags + 1;
     }
     else if (flags > 0){
-            grid[x][y].flagged=true;
-            flags = flags - 1;
+        grid[x][y].flagged=true;
+        flags = flags - 1;
     }
     document.getElementById("flagsLeft").innerHTML = ("Remaining flags: " + flags);
-
     if (win(cols, rows, grid, mines)) {
-        window.alert("You won!");
-        location = location;
+        gameover = true;
+        win = true;
     }
 }
 
 function reveal(x,y) {
     if (grid[x][y].flagged) return;
     grid[x][y].clicked=true;
+    /** Calls lose function */
+    if (grid[x][y].mine) {
+        gameover = true;
+    }
     /** Generates spaces if the box is an space and not a mine*/
-    if (grid[x][y].count==0 && grid[x][y].mine==false) {
+    else if (grid[x][y].count==0) {
         reveal_spaces(x,y,cols,rows,grid);
     }
     /** Calls win function */
     if (win(cols, rows, grid, mines)) {
-        window.alert("You won!");
-        window.location.reload(true);
+        gameover = true;
+        win = true;
     }
-    /** Calls lose function */
-    if(grid[x][y].mine == true) {
-        lose();
-    }
+    
 }
 
 /**
@@ -163,5 +172,5 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
-    
+    redraw();
 }
