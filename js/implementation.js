@@ -67,6 +67,35 @@ function mine_population(number, rows, cols, multi_array){
 }
 
 /**
+	* This function shuffles the mines among the unrevealed spaces left on the board.
+	* @param {number} number - number of mines
+	* @param {number} rows - number of rows
+	* @param {number} cols - number of cols
+	* @param {array} multi_array - the grid of the game
+	* @pre: need valid number of mines, rows, cols, and a grid
+	* @post: populates mines on the grid
+ */
+function mine_shuffle(rows, cols, multi_array){
+	numMinesLeft = 0;
+	numSpacesLeft = 0;
+
+	//find the number of mines left unrevealed
+	for(i = 0; i < rows; i++){
+		for( j = 0 ; j < cols; j++){
+			if(multi_array[i][j].clicked && !multi_array[i][j].flagged){
+				numSpcesLeft++;
+
+				if(multi_array[i][j].mine){
+					numMinesLeft++;
+				}
+			}
+		}
+	}
+
+
+}
+
+/**
 	* checks to see if a given index of a 2d array is within that array's bounds
 	* @param {number} a - bound variable for the rows of grid
 	* @param {number} b - bound variable for the of grid
