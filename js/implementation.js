@@ -143,15 +143,15 @@ function reveal_spaces(y, x, cols, rows, multi_array){
 		for(let b = x-1; b <= x+1; b++){
 			if(is_within_bounds(a,b,cols,rows)){
 				/** click the boxes that have count=0, haven't been cliked and are not a mine or flag */
-				if(multi_array[a][b].count == 0 && grid[a][b].clicked==false && multi_array[a][b].mine == false && multi_array[a][b].flagged == false){
-					multi_array[a][b].clicked = true;
+				if(multi_array[a][b].count == 0 && grid[a][b].revealed==false && multi_array[a][b].mine == false && multi_array[a][b].flagged == false){
+					multi_array[a][b].revealed = true;
 					/** recursive call to reveal spaces of the new count=0 box */
 					reveal_spaces(a,b,cols,rows,multi_array);
 				}
 
 				/** reach a number boundarie, if it is not a bomb or flag click the box */
 				else if (multi_array[a][b].mine==false && multi_array[a][b].count>0 && multi_array[a][b].flagged == false){
-					multi_array[a][b].clicked = true;
+					multi_array[a][b].revealed = true;
 				}
 			}
 		}
