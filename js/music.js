@@ -19,7 +19,7 @@
 function music(state)
 {
 	this.music = document.createElement("audio");
-	this.music.src = "../sound/*.mp3";
+	this.music.src = "../sound/bensound-extremeaction.mp3";
 	this.music.setAttribute("preload", "auto");
 	this.music.setAttribute("controls", "none");
 	this.music.style.display = "none";
