@@ -109,7 +109,7 @@ function create2DArray(cols,rows){
   * @return none
 */
 function flag(x,y) {
-    if (grid[x][y].clicked) {
+    if (grid[x][y].revealed) {
         return;
     }
     if (grid[x][y].flagged){
@@ -130,7 +130,7 @@ function flag(x,y) {
 
 function reveal(x,y) {
     if (grid[x][y].flagged) return;
-    grid[x][y].clicked=true;
+    grid[x][y].revealed=true;
     /** Generates spaces if the box is an space and not a mine*/
     if (grid[x][y].count==0 && grid[x][y].mine==false) {
         reveal_spaces(x,y,cols,rows,grid);
@@ -147,7 +147,7 @@ function reveal(x,y) {
 }
 
 /**
- * Changes the box implementation when it is clicked  the number of mines adjacent to that spot will appear. If they have flagged every
+ * Changes the box implementation when it is revealed  the number of mines adjacent to that spot will appear. If they have flagged every
  * mine, they win
  *
  * @pre The board has been created and filled with mines, the user is playing
@@ -170,7 +170,16 @@ function mousePressed() {
 function toggleCheats(){
     for(x = 0; x < cols; x++){
         for(y = 0; y < rows; y++){
-            grid[x][y].clicked = true;
+            if(cheating === false){
+                cheating = true;
+                grid[x][y].revealed = true;
+            }
+            else{
+                cheating = false;
+                if(grid[x][y].hasBeenRevealed === false){
+                    grid[x][y].revealed = false;
+                }
+            }
         }
     }
 }
