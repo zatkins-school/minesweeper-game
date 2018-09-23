@@ -76,16 +76,19 @@ function mine_population(number, rows, cols, multi_array){
  */
 function mine_shuffle(rows, cols, multi_array){
 	let numMinesLeft = 0;
-	let numSpacesLeft = 0;
+	let unrevealedSpacesArray = [];
 
 	//find the number of mines left unrevealed
 	for(let i = 0; i < rows; i++){
 		for(let j = 0 ; j < cols; j++){
 			if(multi_array[i][j].clicked && !multi_array[i][j].flagged){
-				numSpacesLeft++;
+				unrevealedSpacesArray.push(multi_array[i][j]);
 
 				if(multi_array[i][j].mine){
+					//add to our count of mines
 					numMinesLeft++;
+					//remove the mine from this space
+					multi_array[i][j].mine = false;
 				}
 			}
 		}
@@ -107,9 +110,9 @@ function mine_shuffle(rows, cols, multi_array){
 		}
 	}
 
-	newMineArray.sort();
-
-
+	for(let i = 0; i < newMineArray.length; i++){
+		unrevealedSpacesArray[newMineArray[i]].mine = true;
+	}
 }
 
 /**
