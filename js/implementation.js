@@ -68,7 +68,6 @@ function mine_population(number, rows, cols, multi_array){
 
 /**
 	* This function shuffles the mines among the unrevealed spaces left on the board.
-	* @param {number} number - number of mines
 	* @param {number} rows - number of rows
 	* @param {number} cols - number of cols
 	* @param {array} multi_array - the grid of the game
@@ -76,12 +75,12 @@ function mine_population(number, rows, cols, multi_array){
 	* @post: populates mines on the grid
  */
 function mine_shuffle(rows, cols, multi_array){
-	numMinesLeft = 0;
-	numSpacesLeft = 0;
+	let numMinesLeft = 0;
+	let numSpacesLeft = 0;
 
 	//find the number of mines left unrevealed
-	for(i = 0; i < rows; i++){
-		for( j = 0 ; j < cols; j++){
+	for(let i = 0; i < rows; i++){
+		for(let j = 0 ; j < cols; j++){
 			if(multi_array[i][j].clicked && !multi_array[i][j].flagged){
 				numSpcesLeft++;
 
@@ -92,7 +91,21 @@ function mine_shuffle(rows, cols, multi_array){
 		}
 	}
 
-
+	let newMineArray = [];
+	//generate random numbers to designate where the mines will be shuffled to
+	let shufflingMines = true;
+	while(shufflingMines){
+		//Check if we've found a location for every mine
+		if(newMineArray.length === numMinesLeft){
+			shufflingMines = false;
+		} else {
+			//If not, find a new location for a new mine
+			let spaceIndex = Math.floor(Math.random()*rows*cols);
+			if(unique_func(spaceIndex, multi_array, multi_array.length)){
+				newMineArray.push(spaceIndex);
+			}
+		}
+	}
 }
 
 /**
