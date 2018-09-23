@@ -11,6 +11,7 @@
 /** ------------Global variables ------------ */
 
 let grid;
+let cheating = false;
 let cols=0;
 let rows=0;
 let mines=0;
@@ -161,5 +162,13 @@ function mouseClicked(){
       if(grid[x][y].mine == true){
         lose();
       }
+    }
+}
+
+function toggleCheats(){
+    for(x = 0; x < cols; x++){
+        for(y = 0; y < rows; y++){
+            grid[x][y].clicked = true;
+        }
     }
 }
