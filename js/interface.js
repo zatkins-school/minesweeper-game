@@ -108,31 +108,43 @@ function create2DArray(cols,rows){
   *       (decrementing flagCount by 1) if this is repeated, the flag will be removed and flagCount will increase by 1
   * @return none
 */
-function keyReleased(){
-        if (key === 'f'){
-                let x;
-                let y;
-                x = floor(mouseX/width);
-                y = floor(mouseY/width);
-                if (grid[x][y].clicked==false){
-                        if (grid[x][y].flagged==true){
-                                grid[x][y].flagged=false;
-                                flags = flags + 1;
-                        }
-                        else if (flags > 0){
-                                grid[x][y].flagged=true;
-                                flags = flags - 1;
-                        }
-                }
-                document.getElementById("flagsLeft").innerHTML = ("Remaining flags: " + flags);
+function flag(x,y) {
+    if (grid[x][y].clicked) {
+        return;
+    }
+    if (grid[x][y].flagged){
+            grid[x][y].flagged=false;
+            flags = flags + 1;
+    }
+    else if (flags > 0){
+            grid[x][y].flagged=true;
+            flags = flags - 1;
+    }
+    document.getElementById("flagsLeft").innerHTML = ("Remaining flags: " + flags);
 
-                if(win(cols, rows, grid, mines)){
-                    window.alert("You won!");
-                    location = location;
-                }
-        }
+    if (win(cols, rows, grid, mines)) {
+        window.alert("You won!");
+        location = location;
+    }
 }
 
+function reveal(x,y) {
+    if (grid[x][y].flagged) return;
+    grid[x][y].clicked=true;
+    /** Generates spaces if the box is an space and not a mine*/
+    if (grid[x][y].count==0 && grid[x][y].mine==false) {
+        reveal_spaces(x,y,cols,rows,grid);
+    }
+    /** Calls win function */
+    if (win(cols, rows, grid, mines)) {
+        window.alert("You won!");
+        window.location.reload(true);
+    }
+    /** Calls lose function */
+    if(grid[x][y].mine == true) {
+        lose();
+    }
+}
 
 /**
  * Changes the box implementation when it is clicked  the number of mines adjacent to that spot will appear. If they have flagged every
@@ -142,27 +154,17 @@ function keyReleased(){
  * @post if the user clicks a mine, they lose. If they click anything other than a mine,
  * @return none
  */
-function mouseClicked(){
+function mousePressed() {
     /** Gets coordinate of the click input */
     let x = floor(mouseX/width);
     let y = floor(mouseY/width);
-    /** If the box does not have a flag, change the boxs implementation */
-    if (grid[x][y].flagged==false){
-      grid[x][y].clicked=true;
-      /** Generates spaces if the box is an space and not a mine*/
-      if (grid[x][y].count==0 && grid[x][y].mine==false){
-          reveal_spaces(x,y,cols,rows,grid);
-      }
-      /** Calls win function */
-      if(win(cols, rows, grid, mines)){
-          window.alert("You won!");
-          window.location.reload(true);
-      }
-      /** Calls lose function */
-      if(grid[x][y].mine == true){
-        lose();
-      }
+    if (mouseButton === LEFT) {
+        reveal(x,y);
     }
+    else if (mouseButton === RIGHT) {
+        flag(x,y);
+    }
+    
 }
 
 function toggleCheats(){
