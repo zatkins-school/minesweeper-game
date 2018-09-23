@@ -190,7 +190,4 @@ function win(cols, rows, multi_array, flags){
 	* @param {none}
 	* @pre: user has to lose the game
 	* @post: alerts user that the game is over
-	*/
-function lose(){
-	
-}
+*/

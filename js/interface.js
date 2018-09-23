@@ -16,7 +16,8 @@ let rows=0;
 let mines=0;
 let width=30;
 let flags=0;
-let gameover,win = false;
+let isGameover = false;
+let isWin = false;
 
 /** ------------ P5 interface ------------ */
 /** Creates a canvas with a 2D array according to the input
@@ -69,7 +70,6 @@ function setup() {
 
     /** Populates the count of each box in the grid */
     generate_playing_field(mines, rows, cols, grid);
-    draw();
 }
 
 /** Draws the canvas on the site by calling the show function on each box
@@ -83,13 +83,15 @@ function draw() {
         grid[c][r].show();
         }
     }
-    if (gameover) {
-        if (win) {
+    document.getElementById("flagsLeft").innerHTML = ("Remaining flags: " + flags);
+    if (isGameover) {
+        if (isWin) {
             window.alert("You win!");
         }
         else {
             window.alert("You lose.");
         }
+        noLoop();
     }
 }
 
@@ -128,10 +130,10 @@ function flag(x,y) {
         grid[x][y].flagged=true;
         flags = flags - 1;
     }
-    document.getElementById("flagsLeft").innerHTML = ("Remaining flags: " + flags);
     if (win(cols, rows, grid, mines)) {
-        gameover = true;
-        win = true;
+        grid[x][y].show();
+        isGameover = true;
+        isWin = true;
     }
 }
 
@@ -140,7 +142,9 @@ function reveal(x,y) {
     grid[x][y].clicked=true;
     /** Calls lose function */
     if (grid[x][y].mine) {
-        gameover = true;
+        grid[x][y].show();
+        isGameover = true;
+        return;
     }
     /** Generates spaces if the box is an space and not a mine*/
     else if (grid[x][y].count==0) {
@@ -148,8 +152,9 @@ function reveal(x,y) {
     }
     /** Calls win function */
     if (win(cols, rows, grid, mines)) {
-        gameover = true;
-        win = true;
+        grid[x][y].show();
+        isGameover = true;
+        isWin = true;
     }
     
 }
@@ -172,5 +177,5 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
-    redraw();
+    console.log(mouseButton, isGameover, isWin);
 }
