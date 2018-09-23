@@ -82,7 +82,7 @@ function mine_shuffle(rows, cols, multi_array){
 	for(let i = 0; i < rows; i++){
 		for(let j = 0 ; j < cols; j++){
 			if(multi_array[i][j].clicked && !multi_array[i][j].flagged){
-				numSpcesLeft++;
+				numSpacesLeft++;
 
 				if(multi_array[i][j].mine){
 					numMinesLeft++;
@@ -106,6 +106,10 @@ function mine_shuffle(rows, cols, multi_array){
 			}
 		}
 	}
+
+	newMineArray.sort();
+
+
 }
 
 /**
