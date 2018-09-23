@@ -25,6 +25,10 @@ function music(state)
 	this.music.style.display = "none";
 	document.body.appendChild(this.sound);
 	this.state = state;
+	if(state)
+	{
+		playMusic();
+	}
 }
 
 /**
@@ -36,6 +40,7 @@ function music(state)
 function toggleMusic()
 {
 	state = !(state);
+	playMusic();
 }
 
 /**
