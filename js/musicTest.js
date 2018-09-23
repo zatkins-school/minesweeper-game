@@ -1,4 +1,5 @@
 function musicTest()
 {
-		m = new Music(true);
+	alert("test2");
+	m = new Music(true);
 }
