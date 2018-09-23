@@ -107,30 +107,6 @@ function create2DArray(cols,rows){
   *       (decrementing flagCount by 1) if this is repeated, the flag will be removed and flagCount will increase by 1
   * @return none
 */
-// function keyReleased(){
-//         if (key === 'f'){
-//                 let x;
-//                 let y;
-//                 x = floor(mouseX/width);
-//                 y = floor(mouseY/width);
-//                 if (grid[x][y].clicked==false){
-//                         if (grid[x][y].flagged==true){
-//                                 grid[x][y].flagged=false;
-//                                 flags = flags + 1;
-//                         }
-//                         else if (flags > 0){
-//                                 grid[x][y].flagged=true;
-//                                 flags = flags - 1;
-//                         }
-//                 }
-//                 document.getElementById("flagsLeft").innerHTML = ("Remaining flags: " + flags);
-
-//                 if(win(cols, rows, grid, mines)){
-//                     window.alert("You won!");
-//                     location = location;
-//                 }
-//         }
-// }
 function flag(x,y) {
     if (grid[x][y].clicked) {
         return;
