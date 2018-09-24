@@ -50,7 +50,7 @@ function Box(x,y,width)
    * @returntype: undefined
 */
 Box.prototype.show = function() {
-    this.hasBeenRevealed = true;
+    
     fill(250, 250, 250  );
     rect(this.x, this.y, this.w, this.w);
     if (this.revealed && this.flagged==false){

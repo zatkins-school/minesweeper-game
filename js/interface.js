@@ -168,18 +168,23 @@ function mousePressed() {
 }
 
 function toggleCheats(){
+    if(cheating === true){
+        cheating = false;
+    }
+    else{
+        cheating = true;
+    }
     for(x = 0; x < cols; x++){
         for(y = 0; y < rows; y++){
-            if(cheating === false){
-                cheating = true;
+            if(cheating === true){
                 grid[x][y].revealed = true;
             }
             else{
-                cheating = false;
                 if(grid[x][y].hasBeenRevealed === false){
                     grid[x][y].revealed = false;
                 }
             }
         }
     }
+    redraw();
 }
