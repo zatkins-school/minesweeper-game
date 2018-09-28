@@ -74,6 +74,7 @@ function mine_population(number, rows, cols, multi_array){
  */
 function mine_shuffle(multi_array){
 	let numMinesLeft = 0;
+	let totalMines = 0;
 	let unrevealedSpacesArray = [];
 
 	//find the number of mines left unrevealed
@@ -88,6 +89,9 @@ function mine_shuffle(multi_array){
 					//remove the mine from this space
 					multi_array[i][j].mine = false;
 				}
+			}
+			if(multi_array[i][j].mine){
+				totalMines++;
 			}
 		}
 	}
@@ -108,9 +112,13 @@ function mine_shuffle(multi_array){
 		}
 	}
 
+	//loop through those indecies and mark them as mines
 	for(let i = 0; i < newMineArray.length; i++){
 		unrevealedSpacesArray[newMineArray[i]].mine = true;
 	}
+
+	//Regenerate the field to move the numbers as well
+	generate_playing_field(totalMines, multi_array.length, multi_array[0].length, multi_array);
 }
 
 /**
