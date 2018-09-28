@@ -95,7 +95,7 @@ function mine_shuffle(multi_array){
 			}
 		}
 	}
-
+	console.log(numMinesLeft);
 	let newMineArray = [];
 	//generate random numbers to designate where the mines will be shuffled to
 	let shufflingMines = true;
@@ -172,13 +172,6 @@ function generate_playing_field(number_of_mines, rows, cols, multi_array){
 			/** assigns the number of adjacent mines to the current index*/
 			multi_array[c][r].count = count;
 	  }
-	}
-
-
-	for(let i = 0; i < rows; i++){
-		for(let j = 0; j < cols; j++){
-			console.log(multi_array[i][j]);
-		}
 	}
 }
 
