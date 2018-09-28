@@ -81,6 +81,7 @@ function mine_shuffle(multi_array){
 	for(let i = 0; i < multi_array.length; i++){
 		for(let j = 0 ; j < multi_array[i].length; j++){
 			if(!multi_array[i][j].clicked && !multi_array[i][j].flagged){
+				//create an array of unrevealed spaces
 				unrevealedSpacesArray.push(multi_array[i][j]);
 
 				if(multi_array[i][j].mine){
@@ -106,7 +107,7 @@ function mine_shuffle(multi_array){
 		} else {
 			//If not, find a new location for a new mine
 			let spaceIndex = Math.floor(Math.random()*unrevealedSpacesArray.length);
-			if(unique_func(spaceIndex, multi_array, multi_array.length)){
+			if(unique_func(spaceIndex, newMineArray, newMineArray.length)){
 				newMineArray.push(spaceIndex);
 			}
 		}
