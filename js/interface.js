@@ -216,6 +216,11 @@ function reveal(x,y) {
     /** Generates spaces if the box is an space and not a mine*/
     else if (grid[x][y].count==0) {
         reveal_spaces(x,y,cols,rows,grid);
+
+        //I'm sorry Zach
+        if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
+            mine_shuffle(grid);
+        }
     }
     /** Calls win function */
     if (win(cols, rows, grid, mines)) {
