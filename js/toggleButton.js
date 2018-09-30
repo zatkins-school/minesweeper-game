@@ -1,3 +1,12 @@
+/**
+ *  @fileOverview Helper function for DOM manipulation
+ *
+ *  @author       Zachary Atkins
+ */
+/**
+ * toggles button text and checkbox state between 
+ * normal and intense mode
+ */
 function toggleIntenseMode() {
     let button = document.getElementById("intenseMode");
     let checkBox = document.getElementById
