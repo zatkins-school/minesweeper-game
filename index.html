@@ -52,7 +52,10 @@
       <input type="number" id="input3" placeholder = "must be at least 1" style = "width: 165px;" />
     </p>
     <div>
-      <button id="intenseMode" onclick=toggleIntenseMode()>Normal Mode</button>
+      <input id="intenseModeInput" type="checkbox" style="display:none;">
+      <label for="intenseModeInput" >
+          <button id="intenseMode" onclick=toggleIntenseMode()>Normal Mode</button>
+      </label>
     </div><br>
     <button onclick="setup()">Play</button>
    <p> </p>
