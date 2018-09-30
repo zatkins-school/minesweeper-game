@@ -20,5 +20,4 @@ function toggleIntenseMode() {
         button.style.backgroundColor = "#ffce00";
         checkBox.checked = false;
     }
-    console.log(checkBox.checked);
 }

@@ -225,5 +225,4 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
-    console.log(mouseButton, isGameover, isWin);
 }
