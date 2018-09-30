@@ -76,7 +76,7 @@ function setup() {
 }
 
 function minesError() {
-    let errorText = "Error: Must have between 1 and " + (document.getElementById("input1").value*document.getElementById("input2").value -1) + " mines.";
+    let errorText = "Error: Must have between 1 and " + getMineMax() + " mines.";
 
     let errorElem = document.getElementById("minesBoundsError");
     errorElem.innerText = errorText;
@@ -91,6 +91,25 @@ function sizeError() {
     errorElem.innerText = errorText;
     errorElem.hidden = false;
     reset();
+}
+
+function getMineMax() {
+    return  document.getElementById("input1").value * document.getElementById("input2").value - 1;
+}
+
+function checkInputs() {
+    let t_rows = document.getElementById("input1").value;
+    let t_cols = document.getElementById("input2").value;
+    let mineElem = document.getElementById("input3");
+    let t_mineMax;
+    if (t_rows<2 || t_rows>30 || t_cols<2 || t_cols>30) {
+        sizeError();
+        t_mineMax = 1;
+    } else {
+        document.getElementById("sizeBoundsError").hidden = true;
+        t_mineMax = t_rows*t_cols - 1;
+    }
+    mineElem.max = t_mineMax;
 }
 
 /**
