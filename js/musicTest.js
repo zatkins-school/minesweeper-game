@@ -1,5 +1,14 @@
-function musicTest()
+class musicTest
 {
-	alert("test2");
-	m = new Music(true);
+	constructor(){
+		alert("Intense Mode");
+		let m = new Music(true);
+	}
+
+	toggleMusic()
+	{
+			m.toggleMusic();
+	}
 }
+
+//let music = new musicTest();

@@ -28,11 +28,11 @@ class Music
 		this.music.style.display = "none";
 		document.body.appendChild(this.music);
 		this.state = state;
-		if(this.state)
-		{
-			this.music.play();
+		//if(this.state)
+		//{
+		//	this.music.play();
 			//playMusic();
-		}
+		//}
 	}
 
 	/**
@@ -41,10 +41,11 @@ class Music
 		* @pre: None
 		* @post: Mus
 	*/
-	/**toggleMusic()
+	toggleMusic()
 	{
 		this.state = !(this.state);
-		playMusic();
+		alert("It worked.");
+		//playMusic();
 	}
 
 	/**
