@@ -18,6 +18,7 @@ let width=30;
 let flags=0;
 let isGameover = false;
 let isWin = false;
+let isIntense = false;
 
 /** ------------ P5 interface ------------ */
 /** Creates a canvas with a 2D array according to the input
@@ -25,6 +26,9 @@ let isWin = false;
     * @post the board has been created and filled with mines, the user can now play the game!
     */
 function setup() {
+    /** Reset globals */
+    reset();
+    loop();
     /** Gets the dimensions from the user */
     rows = floor(document.getElementById("input1").value);
     cols = floor(document.getElementById("input2").value);
@@ -33,27 +37,25 @@ function setup() {
     flags = mines;
 
     /** Boundaries for the grid */
-    if (rows<2){
-        rows=2;
+    if (rows<2 || rows>30){
+        sizeError();
+        return;
     }
-    if (cols < 2){
-        cols = 2;
-    }
-    if (rows > 30){
-        rows = 30;
-    }
-    if (cols > 30){
-        cols = 30;
+    if (cols < 2 || cols > 30){
+        sizeError();
+        return;
     }
     if(mines<=0){
-        mines=1;
-        flags=1;
+        minesError();
+        return;
     }
     if(mines>=rows*cols){
-        mines=rows*cols-1;
-        flags=mines;
+        minesError();
+        return;
     }
-
+    /** Clear errors */
+    document.getElementById("minesBoundsError").hidden = true;
+    document.getElementById("sizeBoundsError").hidden = true;
     /** Creates a canvas that holds the amount of cols and rows given according to the set width*/
     let canvas = createCanvas(cols*width +1, rows*width +1);
     canvas.parent('canvas-holder');
@@ -73,6 +75,38 @@ function setup() {
     generate_playing_field(mines, rows, cols, grid);
 }
 
+function minesError() {
+    let errorText = "Error: Must have between 1 and " + (document.getElementById("input1").value*document.getElementById("input2").value -1) + " mines.";
+
+    let errorElem = document.getElementById("minesBoundsError");
+    errorElem.innerText = errorText;
+    errorElem.hidden = false;
+    reset();
+}
+
+function sizeError() {
+    let errorText = "Error: Rows and Columns must be between 2 and 30 spaces.";
+
+    let errorElem = document.getElementById("sizeBoundsError");
+    errorElem.innerText = errorText;
+    errorElem.hidden = false;
+    reset();
+}
+
+/**
+ * Resets global variables
+ */
+function reset() {
+    grid = [];
+    cols=0;
+    rows=0;
+    mines=0;
+    width=30;
+    flags=0;
+    isGameover = false;
+    isWin = false;
+    isIntense = false;
+}
 /** Draws the canvas on the site by calling the show function on each box
     * @pre there has been a 2d array built, but it has nothing inside it
     * @post the array is now filled with mines or number of adjacent mines
@@ -93,6 +127,7 @@ function draw() {
             window.alert("You lose.");
         }
         noLoop();
+        reset();
     }
 }
 
@@ -120,6 +155,12 @@ function create2DArray(cols,rows){
   * @return none
 */
 function flag(x,y) {
+    if (isGameover) return;
+    try {
+        grid[x][y].flagged;
+    } catch (e) {
+        return;
+    }
     if (grid[x][y].clicked) {
         return;
     }
@@ -139,6 +180,12 @@ function flag(x,y) {
 }
 
 function reveal(x,y) {
+    if (isGameover) return;
+    try {
+        grid[x][y].flagged;
+    } catch (e) {
+        return;
+    }
     if (grid[x][y].flagged) return;
     grid[x][y].clicked=true;
     /** Calls lose function */
