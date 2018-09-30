@@ -10,6 +10,7 @@
   <!-- CSS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flip.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro" rel="stylesheet">
 </head>
@@ -50,6 +51,9 @@
        Number of mines:
       <input type="number" id="input3" placeholder = "must be at least 1" style = "width: 165px;" />
     </p>
+    <div>
+      <button id="intenseMode" onclick=toggleIntenseMode()>Normal Mode</button>
+    </div><br>
     <button onclick="setup()">Play</button>
    <p> </p>
 
@@ -61,6 +65,7 @@
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/interface.js"></script>
+    <script type="text/javascript" src="js/toggleButton.js"></script>
     <script type="text/javascript" src="js/box.js"></script>
     <script type="text/javascript" src="js/implementation.js"></script>
 
