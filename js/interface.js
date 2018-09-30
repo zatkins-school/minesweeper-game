@@ -29,6 +29,7 @@ function setup() {
     rows = floor(document.getElementById("input1").value);
     cols = floor(document.getElementById("input2").value);
     mines = floor(document.getElementById("input3").value);
+    isIntense = document.getElementById("intenseModeInput").checked;
     flags = mines;
 
     /** Boundaries for the grid */
