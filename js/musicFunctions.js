@@ -16,7 +16,7 @@ function audioCreator()
 	if(state === null)
 	{
 		this.music = document.createElement("audio");
-		this.music.src = "../sound/bensound-highoctane.mp3";
+		this.music.src = "../minesweeper-game/sound/bensound-highoctane.mp3";
 		this.music.setAttribute("preload", "auto");
 		this.music.setAttribute("controls", "none");
 		this.music.setAttribute("loop", "true");
@@ -25,10 +25,6 @@ function audioCreator()
 		document.body.appendChild(this.music);
 		this.music.play();
 		state = true;
-	}
-	else if(state)
-	{
-		alert("Intense Mode Already Activated");
 	}
 	else
 	{
@@ -45,17 +41,6 @@ function audioCreator()
 */
 function audioStopper()
 {
-	if(state === null)
-	{
-		alert("Intense Mode Not Activated");
-	}
-	else if(!state)
-	{
-		alert("Intense Mode Already Deactivated")
-	}
-	else
-	{
 		document.getElementById("intenseAudio").pause();
 		state = false;
-	}
 }

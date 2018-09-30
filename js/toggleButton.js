@@ -4,7 +4,7 @@
  *  @author       Zachary Atkins
  */
 /**
- * toggles button text and checkbox state between 
+ * toggles button text and checkbox state between
  * normal and intense mode
  */
 function toggleIntenseMode() {
@@ -15,9 +15,11 @@ function toggleIntenseMode() {
         button.innerText = "INTENSE MODE!!";
         button.style.backgroundColor = "red";
         checkBox.checked = true;
+				audioCreator();
     } else {
         button.innerText = "Normal Mode";
         button.style.backgroundColor = "#ffce00";
         checkBox.checked = false;
+				audioStopper();
     }
 }
