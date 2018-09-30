@@ -118,13 +118,6 @@ function generate_playing_field(number_of_mines, rows, cols, multi_array){
 			multi_array[c][r].count = count;
 	  }
 	}
-
-
-	for(let i = 0; i < rows; i++){
-		for(let j = 0; j < cols; j++){
-			console.log(multi_array[i][j]);
-		}
-	}
 }
 
 /**
