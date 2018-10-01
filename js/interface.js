@@ -206,7 +206,7 @@ function reveal(x,y) {
         return;
     }
     if (grid[x][y].flagged) return;
-    grid[x][y].clicked=true;
+    
     /** Calls lose function */
     if (grid[x][y].mine) {
         grid[x][y].show();
@@ -216,11 +216,6 @@ function reveal(x,y) {
     /** Generates spaces if the box is an space and not a mine*/
     else if (grid[x][y].count==0) {
         reveal_spaces(x,y,cols,rows,grid);
-
-        //I'm sorry Zach
-        if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
-            mine_shuffle(grid);
-        }
     }
     /** Calls win function */
     if (win(cols, rows, grid, mines)) {
@@ -229,6 +224,12 @@ function reveal(x,y) {
         isWin = true;
     }
     
+    //I'm sorry Zach
+    if(grid[x][y].clicked === false && document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
+        mine_shuffle(grid);
+    }
+
+    grid[x][y].clicked=true;
 }
 
 /**
