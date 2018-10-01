@@ -206,7 +206,7 @@ function reveal(x,y) {
         return;
     }
     if (grid[x][y].flagged) return;
-    
+    grid[x][y].clicked=true;
     /** Calls lose function */
     if (grid[x][y].mine) {
         grid[x][y].show();
@@ -225,11 +225,9 @@ function reveal(x,y) {
     }
     
     //I'm sorry Zach
-    if(grid[x][y].clicked === false && document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
+    if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
         mine_shuffle(grid);
     }
-
-    grid[x][y].clicked=true;
 }
 
 /**
