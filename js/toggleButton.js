@@ -16,10 +16,12 @@ function toggleIntenseMode() {
         button.style.backgroundColor = "red";
         checkBox.checked = true;
 				audioCreator();
+				document.body.style.backgroundImage = "url('../minesweeper-game/css/intenseModeHellfire.jpg')";
     } else {
         button.innerText = "Normal Mode";
         button.style.backgroundColor = "#ffce00";
         checkBox.checked = false;
 				audioStopper();
+				document.body.style.backgroundImage = "url('../minesweeper-game/css/background.jpg')";
     }
 }
