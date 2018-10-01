@@ -206,7 +206,7 @@ function reveal(x,y) {
     } catch (e) {
         return;
     }
-    if (grid[x][y].flagged) return;
+    if (grid[x][y].flagged || grid[x][y].clicked) return;
     grid[x][y].clicked=true;
     /** Calls lose function */
     if (grid[x][y].mine) {
@@ -224,7 +224,7 @@ function reveal(x,y) {
         isGameover = true;
         isWin = true;
     }
-    
+
     //I'm sorry Zach
     if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
         mine_shuffle(grid);
