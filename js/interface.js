@@ -53,6 +53,7 @@ function setup() {
         minesError();
         return;
     }
+    width = max(90 - 2.5*max(rows, cols), 30);
     /** Clear errors */
     document.getElementById("minesBoundsError").hidden = true;
     document.getElementById("sizeBoundsError").hidden = true;
