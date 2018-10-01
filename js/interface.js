@@ -11,6 +11,7 @@
 /** ------------Global variables ------------ */
 
 let grid;
+let cheating = false;
 let cols=0;
 let rows=0;
 let mines=0;
@@ -180,7 +181,7 @@ function flag(x,y) {
     } catch (e) {
         return;
     }
-    if (grid[x][y].clicked) {
+    if (grid[x][y].revealed) {
         return;
     }
     if (grid[x][y].flagged){
@@ -206,13 +207,15 @@ function reveal(x,y) {
         return;
     }
     if (grid[x][y].flagged) return;
-    grid[x][y].clicked=true;
+    grid[x][y].revealed=true;
+    grid[x][y].hasBeenRevealed = true;
     /** Calls lose function */
     if (grid[x][y].mine) {
         grid[x][y].show();
         isGameover = true;
         return;
     }
+   
     /** Generates spaces if the box is an space and not a mine*/
     else if (grid[x][y].count==0) {
         reveal_spaces(x,y,cols,rows,grid);
@@ -227,7 +230,7 @@ function reveal(x,y) {
 }
 
 /**
- * Changes the box implementation when it is clicked  the number of mines adjacent to that spot will appear. If they have flagged every
+ * Changes the box implementation when it is revealed  the number of mines adjacent to that spot will appear. If they have flagged every
  * mine, they win
  *
  * @pre The board has been created and filled with mines, the user is playing
@@ -244,4 +247,28 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
+}
+
+function toggleCheats(){
+    if(cheating === true){
+        cheating = false;
+        console.log("false");
+    }
+    else{
+        cheating = true;
+    }
+    console.log("toggled");
+    for(x = 0; x < cols; x++){
+        for(y = 0; y < rows; y++){
+            if(cheating === true){
+                grid[x][y].revealed = true;
+            }
+            else{
+                if(grid[x][y].hasBeenRevealed === false){
+                    grid[x][y].revealed = false;
+                }
+            }
+        }
+    }
+    redraw();
 }

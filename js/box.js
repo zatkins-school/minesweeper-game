@@ -19,9 +19,10 @@
   * @property {number} y the box's y coordinate
   * @property {number} w the box's width
   * @property {boolean} mine  contains or not a mine
-  * @property {boolean} clicked   has been clicked or not
-  * @property {number} count counter of the times the box has been clicked
+  * @property {boolean} revealed  whether or not the box is revealed
+  * @property {number} count number of mines surrounding this space
   * @property {boolean} flagged   contains or not a flag
+  * @property {boolean} hasBeenRevealed tracks whether the space has been revealed during the session
   */
 
 
@@ -37,9 +38,10 @@ function Box(x,y,width)
     this.y = y;
     this.w = width;
     this.mine = false;
-    this.clicked = false;
+    this.revealed = false;
     this.count = 0;
     this.flagged = false;
+    this.hasBeenRevealed = false;
 }
 
 /**
@@ -48,9 +50,11 @@ function Box(x,y,width)
    * @returntype: undefined
 */
 Box.prototype.show = function() {
+    
     fill(250, 250, 250  );
     rect(this.x, this.y, this.w, this.w);
-    if (this.clicked && this.flagged==false){
+    if (this.revealed && this.flagged==false){
+        
         if(this.mine==true){
             // red
             fill(179, 0, 0);
