@@ -131,6 +131,7 @@ function flag(x,y) {
 function reveal(x,y) {
     if (grid[x][y].flagged) return;
     grid[x][y].revealed=true;
+    grid[x][y].hasBeenRevealed = true;
     /** Generates spaces if the box is an space and not a mine*/
     if (grid[x][y].count==0 && grid[x][y].mine==false) {
         reveal_spaces(x,y,cols,rows,grid);
@@ -170,10 +171,12 @@ function mousePressed() {
 function toggleCheats(){
     if(cheating === true){
         cheating = false;
+        console.log("false");
     }
     else{
         cheating = true;
     }
+    console.log("toggled");
     for(x = 0; x < cols; x++){
         for(y = 0; y < rows; y++){
             if(cheating === true){

@@ -54,6 +54,7 @@ Box.prototype.show = function() {
     fill(250, 250, 250  );
     rect(this.x, this.y, this.w, this.w);
     if (this.revealed && this.flagged==false){
+        
         if(this.mine==true){
             // red
             fill(179, 0, 0);
