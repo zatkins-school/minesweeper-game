@@ -224,6 +224,10 @@ function reveal(x,y) {
         isWin = true;
     }
     
+    //I'm sorry Zach
+    if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
+        mine_shuffle(grid);
+    }
 }
 
 /**
