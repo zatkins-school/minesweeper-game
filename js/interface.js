@@ -225,8 +225,8 @@ function reveal(x,y) {
         isWin = true;
     }
 
-    //I'm sorry Zach
-    if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
+    /** Check if we're in INTENSE MODE, and shuffle the mines if we are */
+    if(isIntense){
         mine_shuffle(grid);
     }
 }
