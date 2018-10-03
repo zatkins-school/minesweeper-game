@@ -18,7 +18,6 @@ let width=30;
 let flags=0;
 let isGameover = false;
 let isWin = false;
-let isIntense = false;
 
 /** ------------ P5 interface ------------ */
 /** Creates a canvas with a 2D array according to the input
@@ -33,7 +32,6 @@ function setup() {
     rows = floor(document.getElementById("input1").value);
     cols = floor(document.getElementById("input2").value);
     mines = floor(document.getElementById("input3").value);
-    isIntense = document.getElementById("intenseModeInput").checked;
     flags = mines;
 
     /** Boundaries for the grid */
@@ -129,7 +127,6 @@ function reset() {
     flags=0;
     isGameover = false;
     isWin = false;
-    isIntense = false;
 }
 /** Draws the canvas on the site by calling the show function on each box
     * @pre there has been a 2d array built, but it has nothing inside it
