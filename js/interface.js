@@ -75,9 +75,7 @@ function setup() {
     /** Populates the count of each box in the grid */
     generate_playing_field(mines, rows, cols, grid);
 
-    if(isIntense === true){
-        shakeIt();
-    }
+     
 }
 
 function minesError() {
@@ -230,7 +228,7 @@ function reveal(x,y) {
     }
 
     //I'm sorry Zach no ur not
-    if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
+    if(isIntense()){
         mine_shuffle(grid);
     }
 }
