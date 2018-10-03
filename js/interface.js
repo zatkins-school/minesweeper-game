@@ -75,6 +75,7 @@ function setup() {
 }
 
 function isIntense() {
+    console.log(document.getElementById("intenseModeInput").checked);
     return document.getElementById("intenseModeInput").checked;
 }
 
