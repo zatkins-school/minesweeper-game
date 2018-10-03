@@ -18,7 +18,6 @@ let width=30;
 let flags=0;
 let isGameover = false;
 let isWin = false;
-let isIntense = false;
 
 /** ------------ P5 interface ------------ */
 /** Creates a canvas with a 2D array according to the input
@@ -33,7 +32,6 @@ function setup() {
     rows = floor(document.getElementById("input1").value);
     cols = floor(document.getElementById("input2").value);
     mines = floor(document.getElementById("input3").value);
-    isIntense = document.getElementById("intenseModeInput").checked;
     flags = mines;
 
     /** Boundaries for the grid */
@@ -74,6 +72,10 @@ function setup() {
 
     /** Populates the count of each box in the grid */
     generate_playing_field(mines, rows, cols, grid);
+}
+
+function isIntense() {
+    return document.getElementById("intenseModeInput").checked;
 }
 
 function minesError() {
