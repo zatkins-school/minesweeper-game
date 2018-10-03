@@ -72,6 +72,8 @@ function setup() {
 
     /** Populates the count of each box in the grid */
     generate_playing_field(mines, rows, cols, grid);
+    
+}
 
 function isIntense() {
     console.log(document.getElementById("intenseModeInput").checked);
