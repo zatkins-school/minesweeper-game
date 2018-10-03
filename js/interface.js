@@ -127,7 +127,6 @@ function reset() {
     flags=0;
     isGameover = false;
     isWin = false;
-    isIntense = false;
 }
 /** Draws the canvas on the site by calling the show function on each box
     * @pre there has been a 2d array built, but it has nothing inside it
@@ -228,7 +227,7 @@ function reveal(x,y) {
     }
 
     /** Check if we're in INTENSE MODE, and shuffle the mines if we are */
-    if(isIntense){
+    if(isIntense()){
         mine_shuffle(grid);
     }
 }
