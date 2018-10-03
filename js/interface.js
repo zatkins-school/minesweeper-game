@@ -74,6 +74,10 @@ function setup() {
 
     /** Populates the count of each box in the grid */
     generate_playing_field(mines, rows, cols, grid);
+
+    if(isIntense === true){
+        shakeIt();
+    }
 }
 
 function minesError() {
@@ -225,7 +229,7 @@ function reveal(x,y) {
         isWin = true;
     }
 
-    //I'm sorry Zach
+    //I'm sorry Zach no ur not
     if(document.getElementById("intenseMode").innerText === "INTENSE MODE!!"){
         mine_shuffle(grid);
     }
@@ -249,4 +253,13 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
+}
+
+function shakeIt(){
+    console.log("lets get ready to rumble");
+	//shake it like a polaroid picture
+	canvas = document.getElementById('defaultCanvas0');
+	canvas.style.animation = 'shake 0.5s';
+	canvas.style.animationIterationCount = 'infinite';
+	
 }

@@ -4,9 +4,12 @@
 function IntenseModeStart()
 {
 	audioCreator();
+	
 }
 
 function IntenseModeStop()
 {
 	audioStopper();
 }
+
+
