@@ -232,6 +232,9 @@ function reveal(x,y) {
     if(isIntense()){
         mine_shuffle(grid);
     }
+    if(isIntense()){
+        shakeIt();
+    }
 }
 
 /**
