@@ -96,7 +96,7 @@ function mine_shuffle(multi_array){
 			}
 		}
 	}
-	console.log(numMinesLeft);
+	
 	let newMineArray = [];
 	//generate random numbers to designate where the mines will be shuffled to
 	let shufflingMines = true;
