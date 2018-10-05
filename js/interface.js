@@ -75,11 +75,15 @@ function setup() {
     generate_playing_field(mines, rows, cols, grid);
     
 }
-
+/** returns current intenseMode state
+ */
 function isIntense() {
     return document.getElementById("intenseModeInput").checked;
 }
-
+/**
+ * displays error text for mines bound checking
+ *
+ */
 function minesError() {
     let errorText = "Error: Must have between 1 and " + getMineMax() + " mines.";
 
@@ -88,7 +92,10 @@ function minesError() {
     errorElem.hidden = false;
     reset();
 }
-
+/**
+ * displays error text for size bound checking
+ *
+ */
 function sizeError() {
     let errorText = "Error: Rows and Columns must be between 2 and 30 spaces.";
 
@@ -203,6 +210,12 @@ function flag(x,y) {
     }
 }
 
+
+/** Reveals a space clicked on by the user
+  * @pre The game board has been initialized, the game has begun
+  * @post triggers winning, losing, or the waterfall reveal if necessary, triggers mine shuffle if we are in intense mode
+  * @return none
+*/
 function reveal(x,y) {
     if (isGameover) return;
     try {

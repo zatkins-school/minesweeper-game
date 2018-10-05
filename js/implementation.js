@@ -236,14 +236,3 @@ function win(cols, rows, multi_array, flags){
 		return false;
 	}
 }
-
-/** Let's user know that the game is lost and resets the game
-	* @param {none}
-	* @pre: user has to lose the game
-	* @post: alerts user that the game is over
-*/
-	
-function lose(){
-	window.alert("You lose!");
-	document.location.reload(true);
-}
