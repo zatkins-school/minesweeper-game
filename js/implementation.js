@@ -119,7 +119,7 @@ function mine_shuffle(multi_array){
 	}
 
 	//Regenerate the field to move the numbers as well
-	generate_playing_field(totalMines, multi_array.length, multi_array[0].length, multi_array);
+	generate_playing_field(totalMines, rows, cols, multi_array);
 }
 
 /**
