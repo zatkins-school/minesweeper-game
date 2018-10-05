@@ -81,8 +81,8 @@ function isIntense() {
     return document.getElementById("intenseModeInput").checked;
 }
 /**
- * displays error text for mines bound checking
- *
+ *  displays error text for mines bound checking
+ *  @post minesBoundsError div is un-hidden, error text is displayed
  */
 function minesError() {
     let errorText = "Error: Must have between 1 and " + getMineMax() + " mines.";
@@ -94,7 +94,7 @@ function minesError() {
 }
 /**
  * displays error text for size bound checking
- *
+ *  @post sizeBoundsError div is un-hidden, error text is displayed
  */
 function sizeError() {
     let errorText = "Error: Rows and Columns must be between 2 and 30 spaces.";
