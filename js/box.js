@@ -120,15 +120,23 @@ Box.prototype.show = function() {
             fill(0, 188, 212  );
             beginShape();
             vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //base right
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2 + this.w * (4 / 30)); //cross bottom right
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2 + this.w * (4 / 30)); //right bottom
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2); //right top
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2); //cross top right
             vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w * (3 / 30)); //top outside right
             vertex(this.x + this.w / 2, this.y + this.w * (3 / 30)); //top outside left
             vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w / 2); //left outside top
             vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w / 2 + this.w * (4 / 30)); //left outside bottom
-            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2 + this.w * (4 / 30)); //right bottom
-            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2); //right top
+            vertex(this.x + this.w / 2, this.y + this.w / 2 + this.w * (4 / 30)); //cross bottom left
+            vertex(this.x + this.w / 2, this.y + this.w * 3/4 + this.w * (3 / 30)); //base left
+            endShape(CLOSE);
+
+            fill(250,250,250);
+            beginShape();
             vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w / 2); //left inside
             vertex(this.x + this.w / 2, this.y + this.w * (9 / 30)); //top inside
-            vertex(this.x + this.w / 2, this.y + this.w * 3/4 + this.w * (3 / 30)); //base left
+            vertex(this.x + this.w / 2, this.y + this.w / 2); //cross top left
             endShape(CLOSE);
         }
         else if(this.count==5){
