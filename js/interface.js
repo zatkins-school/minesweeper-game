@@ -210,6 +210,12 @@ function flag(x,y) {
     }
 }
 
+
+/** Reveals a space clicked on by the user
+  * @pre The game board has been initialized, the game has begun
+  * @post triggers winning, losing, or the waterfall reveal if necessary, triggers mine shuffle if we are in intense mode
+  * @return none
+*/
 function reveal(x,y) {
     if (isGameover) return;
     try {
