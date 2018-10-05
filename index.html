@@ -59,14 +59,13 @@
       <label for="intenseModeInput" >
           <button id="intenseMode" onclick=toggleIntenseMode()>Normal Mode</button>
       </label>
-    </div><br>
-    <p>
-      Enable Cheats:
-      <label class="switch" onchange="toggleCheats()">
-        <input type="checkbox">
-        <span class="slider"></span>
+    </div>
+    <div><br>
+      <input id="cheatModeInput" type="checkbox" style="display:none;">
+      <label for="cheatModeInput" >
+          <button id="cheatMode" onclick=toggleCheats()>CHEATS OFF</button>
       </label>
-    </p>
+    </div><br>
     <button onclick="setup()">Play</button>
    <p> </p>
 

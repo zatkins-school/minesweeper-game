@@ -259,29 +259,7 @@ function mousePressed() {
     }
 }
 
-function toggleCheats(){
-    if(cheating === true){
-        cheating = false;
-        console.log("false");
-    }
-    else{
-        cheating = true;
-    }
-    console.log("toggled");
-    for(x = 0; x < cols; x++){
-        for(y = 0; y < rows; y++){
-            if(cheating === true){
-                grid[x][y].revealed = true;
-            }
-            else{
-                if(grid[x][y].hasBeenRevealed === false){
-                    grid[x][y].revealed = false;
-                }
-            }
-        }
-    }
-    redraw();
-}
+
 
 function shakeIt(){
     console.log("lets get ready to rumble");

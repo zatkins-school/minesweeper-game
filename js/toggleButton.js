@@ -12,8 +12,7 @@
  */
 function toggleIntenseMode() {
     let button = document.getElementById("intenseMode");
-    let checkBox = document.getElementById
-    ("intenseModeInput");
+    let checkBox = document.getElementById("intenseModeInput");
     if (button.innerText==="Normal Mode") {
         shakeIt();
         button.innerText = "INTENSE MODE!!";
@@ -33,12 +32,19 @@ function toggleIntenseMode() {
 
 
 function toggleCheats(){
+    let button = document.getElementById("cheatMode");
+    let checkBox = document.getElementById("cheatModeInput");
     if(cheating === true){
         cheating = false;
-        console.log("false");
+        button.innerText = "CHEATS OFF";
+        button.style.backgroundColor = "#ffce00";
+        checkBox.checked = false;
     }
     else{
         cheating = true;
+        button.innerText = "CHEATS ON";
+        button.style.backgroundColor = "red";
+        checkBox.checked = true;
     }
     console.log("toggled");
     for(x = 0; x < cols; x++){
