@@ -239,6 +239,13 @@ function flag(x,y) {
   * @return none
 */
 function reveal(x,y) {
+    /** 1/20 chance of spinning */
+    if(isIntense()){
+        if(Math.floor(Math.random() * 20) === 15 ){
+            spinIt();
+            shakeIt();
+        }
+    }
     if (isGameover) return;
     try {
         grid[x][y].flagged;
@@ -291,11 +298,7 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
-    if(isIntense()){
-        if(Math.floor(Math.random() * 20) === 15 ){
-            spinIt();
-        }
-    }
+    
 }
 
 /**
