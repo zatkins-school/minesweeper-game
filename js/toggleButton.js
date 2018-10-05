@@ -8,7 +8,10 @@
  * toggles button text and checkbox state between
  * normal and intense mode
  * 
- * toggles cheat mode
+ * toggles intense mode
+ * @pre the game must be initialized
+ * @post switches between intense mode and normal mode
+ * @return none
  */
 function toggleIntenseMode() {
     let button = document.getElementById("intenseMode");
@@ -53,7 +56,15 @@ function toggleIntenseMode() {
     }
 }
 
-
+/**
+ * toggles button text and checkbox state for cheats
+ * 
+ * toggles cheats enabled and ghost-reveals all spaces
+ * 
+ * @pre the game must be initialized
+ * @post enables/disables cheats
+ * @return none
+ */
 function toggleCheats(){
     let button = document.getElementById("cheatMode");
     let checkBox = document.getElementById("cheatModeInput");
