@@ -51,10 +51,11 @@ function Box(x,y,width)
 */
 Box.prototype.show = function() {
     
-    fill(250, 250, 250  );
+    fill(200, 200, 200);
     rect(this.x, this.y, this.w, this.w);
     if (this.revealed && this.flagged==false){
-        
+        fill(250, 250, 250);
+        rect(this.x, this.y, this.w, this.w);
         if(this.mine==true){
             // red
             fill(179, 0, 0);
@@ -203,11 +204,8 @@ Box.prototype.show = function() {
             vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom left inside
            endShape(CLOSE);
         }
-        else{
-            // gray
-            fill(224, 224, 224);
-            ellipseMode(CORNER);
-            ellipse(this.x+5, this.y+5, this.w -10 , this.w -10);
+        else {
+            fill(250, 250, 250);
         }
     }
     else if (this.flagged){
