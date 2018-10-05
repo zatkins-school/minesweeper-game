@@ -10,7 +10,7 @@ Built With
     •	HTML, Javascript, and CSS
 
 Project 2 Authors
-		• Zackary Atkins
+		• Zachary Atkins
 		• Gage Phillips
 		• Jacob Marshall
 		• Thomas Gartman
@@ -27,7 +27,7 @@ License
 
 Project 2 Acknowledgments
 		• To Project 1 team for writing a documented, modular project!
-		
+
 Original Acknowledgments
     •	Thanks to Dr. Gibbons for inspiring such a creative project.
     •	P5 for creating an easy to use library
