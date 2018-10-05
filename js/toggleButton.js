@@ -19,15 +19,35 @@ function toggleIntenseMode() {
         button.innerText = "INTENSE MODE!!";
         button.style.backgroundColor = "red";
         checkBox.checked = true;
-				audioCreator();
-				document.body.style.backgroundImage = "url('../minesweeper-game/css/intenseModeHellfire.jpg')";
+        audioCreator();
+        document.body.style.backgroundImage = "url('../minesweeper-game/css/intenseModeHellfire.jpg')";
+        document.getElementById("introtext").hidden = true;
+        document.getElementById("intenseRules").hidden = false;
+        let ptags = document.getElementById("settings").children;
+        for (let elem of ptags){
+            elem.classList.add("intense");
+        }
+        let intenseTexts = document.getElementsByClassName("isIntense");
+        for (let elem of intenseTexts) {
+            elem.classList.add("intense");
+        }
     } else {
         stopAnimation();
         button.innerText = "Normal Mode";
         button.style.backgroundColor = "#ffce00";
         checkBox.checked = false;
-				audioStopper();
-				document.body.style.backgroundImage = "url('../minesweeper-game/css/background.jpg')";
+        audioStopper();
+        document.body.style.backgroundImage = "url('../minesweeper-game/css/background.jpg')";
+        document.getElementById("introtext").hidden = false;
+        document.getElementById("intenseRules").hidden = true;
+        let ptags = document.getElementById("settings").children;
+        for (let elem of ptags){
+            elem.classList.remove("intense");
+        }
+        let intenseTexts = document.getElementsByClassName("isIntense");
+        for (let elem of intenseTexts) {
+            elem.classList.remove("intense");
+        }
     }
 }
 

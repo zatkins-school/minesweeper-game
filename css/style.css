@@ -26,12 +26,39 @@ h2{
 }
 
 p {
-    color: #c0ccd4;
-    font-size: 18px;
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 0.7;
+  color: #c0ccd4;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 0.7;
 }
 
+p.intense {
+  color: black;
+  font-size: 16pt;
+  font-weight: bolder;
+  text-shadow:
+    -0.5px -0.5px 0 red,
+    0.5px -0.5px 0 red,
+    -0.5px 0.5px 0 red,
+    0.5px 0.5px 0 red;
+}
+
+h1.intense, h2.intense {
+  color: red;
+  text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+main.intense {
+  background-color: rgba(131, 130, 130, 0.479);
+  width:60%;
+  margin: auto auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+}
 button{
     font-size: 20px;
     background-color: #ffce00;
