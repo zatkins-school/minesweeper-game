@@ -28,6 +28,13 @@ let isWin = false;
     * @post the board has been created and filled with mines, the user can now play the game!
     */
 function setup() {
+
+    /** Resets cheating button */
+    let button = document.getElementById("cheatMode");
+    let checkBox = document.getElementById("cheatModeInput");
+    button.innerText = "Cheats Off";
+    button.style.backgroundColor = "#ffce00";
+    checkBox.checked = false;
     /** Reset globals */
     reset();
     loop();
@@ -142,6 +149,7 @@ function checkInputs() {
  * @post 
  */
 function reset() {
+    cheating = false;
     grid = [];
     cols=0;
     rows=0;
@@ -283,6 +291,11 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
+    if(isIntense()){
+        if(Math.floor(Math.random() * 20) === 15 ){
+            spinIt();
+        }
+    }
 }
 
 /**
@@ -325,8 +338,8 @@ function stopAnimation(){
 function spinIt(){
     //you spin me right round
     canvas = document.getElementById('defaultCanvas0');
-    canvas.style.animation = 'spin 30s';
-    canvas.style.animationIterationCount = 'infinite';
+    canvas.style.animation = 'spin 2s';
+    canvas.style.animationIterationCount = 'once';
 
 }
 
