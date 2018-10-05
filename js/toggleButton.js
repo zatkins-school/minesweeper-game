@@ -2,10 +2,13 @@
  *  @fileOverview Helper function for DOM manipulation
  *
  *  @author       Zachary Atkins
+ *  @author       Jacob Marshall
  */     
 /**
  * toggles button text and checkbox state between
  * normal and intense mode
+ * 
+ * toggles cheat mode
  */
 function toggleIntenseMode() {
     let button = document.getElementById("intenseMode");
@@ -26,4 +29,29 @@ function toggleIntenseMode() {
 				audioStopper();
 				document.body.style.backgroundImage = "url('../minesweeper-game/css/background.jpg')";
     }
+}
+
+
+function toggleCheats(){
+    if(cheating === true){
+        cheating = false;
+        console.log("false");
+    }
+    else{
+        cheating = true;
+    }
+    console.log("toggled");
+    for(x = 0; x < cols; x++){
+        for(y = 0; y < rows; y++){
+            if(cheating === true){
+                grid[x][y].revealed = true;
+            }
+            else{
+                if(grid[x][y].hasBeenRevealed === false){
+                    grid[x][y].revealed = false;
+                }
+            }
+        }
+    }
+    redraw();
 }
