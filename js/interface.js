@@ -239,19 +239,10 @@ function flag(x,y) {
   * @return none
 */
 function reveal(x,y) {
-    /** 1/20 chance of spinning */
-    if(isIntense()){
-        if(Math.floor(Math.random() * 20) === 15 ){
-            spinIt();
-            shakeIt();
-        }
-    }
+ 
+    
     if (isGameover) return;
-    try {
-        grid[x][y].flagged;
-    } catch (e) {
-        return;
-    }
+    if (x<0 || x>cols-1 || y<0 || y>rows-1) return;
     if (grid[x][y].flagged || grid[x][y].revealed) return;
     grid[x][y].revealed=true;
     grid[x][y].hasBeenRevealed = true;
@@ -297,6 +288,12 @@ function mousePressed() {
     }
     else if (mouseButton === RIGHT) {
         flag(x,y);
+    }
+    if(isIntense()){
+        if(Math.floor(Math.random() * 20) > 0 ){
+            spinIt();
+            shakeIt();
+        }
     }
     
 }
