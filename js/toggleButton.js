@@ -13,7 +13,9 @@
 function toggleIntenseMode() {
     let button = document.getElementById("intenseMode");
     let checkBox = document.getElementById("intenseModeInput");
+    let titleText = document.getElementById('bigText');
     if (button.innerText==="Normal Mode") {
+        titleText.innerHTML = "SUPER DUPER CRAZY INSANE INTENSE MINESWEEPER WOW";
         shakeIt();
         button.innerText = "INTENSE MODE!!";
         button.style.backgroundColor = "red";
@@ -31,6 +33,7 @@ function toggleIntenseMode() {
             elem.classList.add("intense");
         }
     } else {
+        titleText.innerHTML = "MINESWEEPER";
         stopAnimation();
         button.innerText = "Normal Mode";
         button.style.backgroundColor = "#ffce00";
