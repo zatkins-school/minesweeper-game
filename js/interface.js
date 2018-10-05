@@ -77,7 +77,6 @@ function setup() {
 }
 
 function isIntense() {
-    console.log(document.getElementById("intenseModeInput").checked);
     return document.getElementById("intenseModeInput").checked;
 }
 
@@ -262,7 +261,6 @@ function mousePressed() {
 
 
 function shakeIt(){
-    console.log("lets get ready to rumble");
 	//shake it like a polaroid picture
 	canvas = document.getElementById('defaultCanvas0');
 	canvas.style.animation = 'shake 0.5s';
