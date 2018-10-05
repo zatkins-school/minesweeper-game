@@ -75,11 +75,15 @@ function setup() {
     generate_playing_field(mines, rows, cols, grid);
     
 }
-
+/** returns current intenseMode state
+ */
 function isIntense() {
     return document.getElementById("intenseModeInput").checked;
 }
-
+/**
+ * displays error text for mines bound checking
+ *
+ */
 function minesError() {
     let errorText = "Error: Must have between 1 and " + getMineMax() + " mines.";
 
@@ -88,7 +92,10 @@ function minesError() {
     errorElem.hidden = false;
     reset();
 }
-
+/**
+ * displays error text for size bound checking
+ *
+ */
 function sizeError() {
     let errorText = "Error: Rows and Columns must be between 2 and 30 spaces.";
 
