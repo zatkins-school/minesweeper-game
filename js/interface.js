@@ -102,6 +102,10 @@ function getMineMax() {
     return  document.getElementById("input1").value * document.getElementById("input2").value - 1;
 }
 
+/** Takes in the provided board size and mine count from the user and validates that against the set boundaries
+  * @pre assumes that the inputs contain numbers
+  * @post shows error text if aplicable, and sets the max number of mines possible within the given size
+  */
 function checkInputs() {
     let t_rows = document.getElementById("input1").value;
     let t_cols = document.getElementById("input2").value;
