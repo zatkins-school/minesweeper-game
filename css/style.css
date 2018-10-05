@@ -58,14 +58,51 @@ input{
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
+    10% { transform: translate(-1px, -1px) rotate(-1deg); }
+    20% { transform: translate(-1px, 0px) rotate(1deg); }
+    30% { transform: translate(1px, 1px) rotate(0deg); }
     40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    50% { transform: translate(-1px, 1px) rotate(-1deg); }
+    60% { transform: translate(1px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(-1deg); }
     80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    90% { transform: translate(1px, 1px) rotate(0deg); }
+    100% { transform: translate(1px, px) rotate(-1deg); }
   }
+
+@keyframes moveAround {
+    0% {transform: translate(1px, 0px) rotate(0 deg);}
+    1% {transform: translate(1px, 0px) rotate(0 deg);}
+    2% {transform: translate(1px, 0px) rotate(0 deg);}
+    3% {transform: translate(1px, 0px) rotate(0 deg);}
+    4% {transform: translate(1px, 0px) rotate(0 deg);}
+    5% {transform: translate(1px, 0px) rotate(0 deg);}
+    6% {transform: translate(1px, 0px) rotate(0 deg);}
+    7% {transform: translate(1px, 0px) rotate(0 deg);}
+    8% {transform: translate(1px, 0px) rotate(0 deg);}
+    9% {transform: translate(1px, 0px) rotate(0 deg);}
+    10% {transform: translate(1px, 0px) rotate(0 deg);}
+    11% {transform: translate(1px, 0px) rotate(0 deg);}
+    12% {transform: translate(1px, 0px) rotate(0 deg);}
+    13% {transform: translate(1px, 0px) rotate(0 deg);}
+    14% {transform: translate(1px, 0px) rotate(0 deg);}
+    15% {transform: translate(1px, 0px) rotate(0 deg);}
+    16% {transform: translate(1px, 0px) rotate(0 deg);}
+    17% {transform: translate(1px, 0px) rotate(0 deg);}
+    18% {transform: translate(1px, 0px) rotate(0 deg);}
+    19% {transform: translate(1px, 0px) rotate(0 deg);}
+    20% {transform: translate(1px, 0px) rotate(0 deg);}
+    21% {transform: translate(1px, 0px) rotate(0 deg);}
+    22% {transform: translate(1px, 0px) rotate(0 deg);}
+    23% {transform: translate(1px, 0px) rotate(0 deg);}
+    24% {transform: translate(1px, 0px) rotate(0 deg);}
+    25% {transform: translate(1px, 0px) rotate(0 deg);}
+    26% {transform: translate(0px, 1px) rotate(0 deg);}
+    27% {transform: translate(0px, 1px) rotate(0 deg);}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+    
+}

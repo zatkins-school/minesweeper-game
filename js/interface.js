@@ -129,6 +129,7 @@ function reset() {
     flags=0;
     isGameover = false;
     isWin = false;
+   
 }
 /** Draws the canvas on the site by calling the show function on each box
     * @pre there has been a 2d array built, but it has nothing inside it
@@ -232,9 +233,7 @@ function reveal(x,y) {
     if(isIntense()){
         mine_shuffle(grid);
     }
-    if(isIntense()){
-        shakeIt();
-    }
+    
 }
 
 /**
@@ -265,3 +264,18 @@ function shakeIt(){
 	canvas.style.animationIterationCount = 'infinite';
 	
 }
+
+function stopAnimation(){
+    canvas = document.getElementById('defaultCanvas0');
+    canvas.style.animation = 'none';
+    canvas.style.animationIterationCount = '0';
+}
+
+function spinIt(){
+    //you spin me right round
+    canvas = document.getElementById('defaultCanvas0');
+    canvas.style.animation = 'spin 30s';
+    canvas.style.animationIterationCount = 'infinite';
+
+}
+
