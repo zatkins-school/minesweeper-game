@@ -4,6 +4,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
     height: 100%;
     /* Option #2: dark grey background */
     background-color: #484d5c;
@@ -131,6 +132,10 @@ input{
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+  }
+
+  div.cheats{
+    margin:10px;
   }
   
   /* Rounded sliders */
