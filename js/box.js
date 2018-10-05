@@ -51,9 +51,11 @@ function Box(x,y,width)
 */
 Box.prototype.show = function() {
     
+    //dark gray fill for unrevealed spaces
     fill(200, 200, 200);
     rect(this.x, this.y, this.w, this.w);
     if (this.revealed && this.flagged==false){
+        //lighter gray fill for revealed spaces
         fill(250, 250, 250);
         rect(this.x, this.y, this.w, this.w);
         if(this.mine==true){
@@ -203,9 +205,6 @@ Box.prototype.show = function() {
             vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom right inside
             vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom left inside
            endShape(CLOSE);
-        }
-        else {
-            fill(250, 250, 250);
         }
     }
     else if (this.flagged){
