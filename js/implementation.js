@@ -1,6 +1,6 @@
 /**
  *  @fileOverview Implementation of Minesweeper
- *
+ *	@author	      Jacob Marshall
  *  @author       Ian Farris
  *  @author       Thor Lyche
  *  @author       Robert Nickel
