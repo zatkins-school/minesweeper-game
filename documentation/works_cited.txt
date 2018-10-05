@@ -6,3 +6,6 @@ Works Cited:
 - Type: JavaScript library
 - Web address: https://p5js.org/
 - Comment: Use of p5 library and its functions. All the code was written from scratch
+
+Additional Work Cited for Bits Please Project 2:
+- https://pixabay.com/en/fire-flame-burn-hot-brand-inferno-1105350/ Picture of fire CC0 Creative Commons License

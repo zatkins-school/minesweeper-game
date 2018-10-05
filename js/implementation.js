@@ -67,6 +67,62 @@ function mine_population(number, rows, cols, multi_array){
 }
 
 /**
+	* This function shuffles the mines among the unrevealed spaces left on the board.
+	* @param {array} multi_array - the grid of the game
+	* @pre: need valid number of mines, rows, cols, and a grid
+	* @post: populates mines on the grid
+ */
+function mine_shuffle(multi_array){
+	let numMinesLeft = 0;
+	let totalMines = 0;
+	let unrevealedSpacesArray = [];
+
+	//find the number of mines left unrevealed
+	for(let i = 0; i < multi_array.length; i++){
+		for(let j = 0 ; j < multi_array[i].length; j++){
+			if(!multi_array[i][j].clicked && !multi_array[i][j].flagged){
+				//create an array of unrevealed spaces
+				unrevealedSpacesArray.push(multi_array[i][j]);
+
+				if(multi_array[i][j].mine){
+					//add to our count of mines
+					numMinesLeft++;
+					//remove the mine from this space
+					multi_array[i][j].mine = false;
+				}
+			}
+			if(multi_array[i][j].mine){
+				totalMines++;
+			}
+		}
+	}
+	console.log(numMinesLeft);
+	let newMineArray = [];
+	//generate random numbers to designate where the mines will be shuffled to
+	let shufflingMines = true;
+	while(shufflingMines){
+		//Check if we've found a location for every mine
+		if(newMineArray.length === numMinesLeft){
+			shufflingMines = false;
+		} else {
+			//If not, find a new location for a new mine
+			let spaceIndex = Math.floor(Math.random()*unrevealedSpacesArray.length);
+			if(unique_func(spaceIndex, newMineArray, newMineArray.length)){
+				newMineArray.push(spaceIndex);
+			}
+		}
+	}
+
+	//loop through those indecies and mark them as mines
+	for(let i = 0; i < newMineArray.length; i++){
+		unrevealedSpacesArray[newMineArray[i]].mine = true;
+	}
+
+	//Regenerate the field to move the numbers as well
+	generate_playing_field(totalMines, multi_array.length, multi_array[0].length, multi_array);
+}
+
+/**
 	* checks to see if a given index of a 2d array is within that array's bounds
 	* @param {number} a - bound variable for the rows of grid
 	* @param {number} b - bound variable for the of grid
