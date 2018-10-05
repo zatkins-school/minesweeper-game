@@ -136,10 +136,10 @@ Box.prototype.show = function() {
             vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //base left bottom
             vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (8 / 30)); //base left top
             vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2 + this.w * (1 / 30)); //middle right inside
-            vertex(this.x + this.w / 2, this.y + this.w * 3 / 4 + this.w * (3 / 30)); //top point inside
-            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //top left point inside
-            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (7 / 30)); //top left point outside
-            vertex(this.x + this.w / 2 + this.w * (3 / 30), this.y + this.w * 3 / 4 + this.w * (7 / 30)); //top point top
+            vertex(this.x + this.w / 2, this.y + this.w * 3 / 4); //top point inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4); //top left point inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (4 / 30)); //top left point outside
+            vertex(this.x + this.w / 2 + this.w * (3 / 30), this.y + this.w * 3 / 4 + this.w * (4 / 30)); //top point top
             vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w / 2); //right point right
             vertex(this.x + this.w / 2 - this.w * (3 / 30), this.y + this.w * (7 / 30)); //base left inside
             vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w * (7 / 30)); //base right top
