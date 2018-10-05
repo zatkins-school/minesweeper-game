@@ -76,6 +76,8 @@ function setup() {
     
 }
 /** returns current intenseMode state
+ * 
+ * @returns checked state of intenseModeInput
  */
 function isIntense() {
     return document.getElementById("intenseModeInput").checked;
@@ -104,7 +106,11 @@ function sizeError() {
     errorElem.hidden = false;
     reset();
 }
-
+/**
+ * calculates the maximum number of mines based on current input
+ *
+ * @returns rows*cols-1, max number of mines
+ */
 function getMineMax() {
     return  document.getElementById("input1").value * document.getElementById("input2").value - 1;
 }
