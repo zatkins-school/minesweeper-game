@@ -247,11 +247,7 @@ function reveal(x,y) {
         }
     }
     if (isGameover) return;
-    try {
-        grid[x][y].flagged;
-    } catch (e) {
-        return;
-    }
+    if (x<0 || x>cols-1 || y<0 || y>rows-1) return;
     if (grid[x][y].flagged || grid[x][y].revealed) return;
     grid[x][y].revealed=true;
     grid[x][y].hasBeenRevealed = true;
