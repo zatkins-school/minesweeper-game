@@ -109,7 +109,7 @@ function sizeError() {
 /**
  * calculates the maximum number of mines based on current input
  *
- * @returns rows*cols-1, max number of mines
+ * @returns {number} rows*cols-1, max number of mines
  */
 function getMineMax() {
     return  document.getElementById("input1").value * document.getElementById("input2").value - 1;
@@ -132,6 +132,8 @@ function checkInputs() {
 
 /**
  * Resets global variables
+ * 
+ * @post 
  */
 function reset() {
     grid = [];
