@@ -80,7 +80,7 @@ function mine_shuffle(multi_array){
 	//find the number of mines left unrevealed
 	for(let i = 0; i < multi_array.length; i++){
 		for(let j = 0 ; j < multi_array[i].length; j++){
-			if(!multi_array[i][j].clicked && !multi_array[i][j].flagged){
+			if(!multi_array[i][j].revealed && !multi_array[i][j].flagged){
 				//create an array of unrevealed spaces
 				unrevealedSpacesArray.push(multi_array[i][j]);
 
