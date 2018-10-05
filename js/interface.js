@@ -265,8 +265,13 @@ function mousePressed() {
     }
 }
 
-
-
+/**
+ * Begins the shaking animation
+ *
+ * @pre The user is in intense mode
+ * @post the shake animation starts
+ * @return none
+ */
 function shakeIt(){
 	//shake it like a polaroid picture
 	canvas = document.getElementById('defaultCanvas0');
@@ -275,12 +280,28 @@ function shakeIt(){
 	
 }
 
+/**
+ * Cease all animations
+ *
+ * @pre The user is in normal mode
+ * @post all animations stop
+ * @return none
+ */
+
 function stopAnimation(){
     canvas = document.getElementById('defaultCanvas0');
     canvas.style.animation = 'none';
     canvas.style.animationIterationCount = '0';
 }
 
+
+/**
+ * Begins the spinning animation
+ *
+ * @pre The user is in intense mode
+ * @post the spin animation starts
+ * @return none
+ */
 function spinIt(){
     //you spin me right round
     canvas = document.getElementById('defaultCanvas0');
