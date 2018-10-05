@@ -247,14 +247,3 @@ function lose(){
 	window.alert("You lose!");
 	document.location.reload(true);
 }
-
-
-function logRevealedMines(){
-	for(x = 0; x < cols; x++){
-		for(y=0; y < rows; y++){
-			if(grid[x][y].revealed === true){
-				grid[x][y].hasBeenRevealed = true;
-			}
-		}
-	}
-}
