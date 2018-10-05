@@ -28,6 +28,13 @@ let isWin = false;
     * @post the board has been created and filled with mines, the user can now play the game!
     */
 function setup() {
+
+    /** Resets cheating button */
+    let button = document.getElementById("cheatMode");
+    let checkBox = document.getElementById("cheatModeInput");
+    button.innerText = "Cheats Off";
+    button.style.backgroundColor = "#ffce00";
+    checkBox.checked = false;
     /** Reset globals */
     reset();
     loop();
@@ -140,6 +147,7 @@ function checkInputs() {
  * Resets global variables
  */
 function reset() {
+    cheating = false;
     grid = [];
     cols=0;
     rows=0;
