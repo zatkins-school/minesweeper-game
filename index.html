@@ -15,65 +15,73 @@
 </head>
 
 <body oncontextmenu="return false;">
-  <h1> MINESWEEPER </h1>
+  <main class="isIntense" >
+    <h1 class="isIntense"> MINESWEEPER </h1>
+    <div id="introtext">
+      <h2> Introduction </h2>
+      <p> In the grid, some cells contain mines and others don't. </p>
+      <p> If you click on a cell containing a mine, you lose. </p>
+      <p> If you click on a cell that is not a mine, it will reveal the number of mines in neighbor cells </p>
+      <p> A cell "neighbours" are the cells adjacent above, below, left, right, and all 4 diagonals. </p>
+      <p> If you place flags on top of all the cells containing a mine, you win </p>
 
-  <h2> Introduction </h2>
-    <p> In the grid, some cells contain mines and others don't. </p>
-    <p> If you click on a cell containing a mine, you lose. </p>
-    <p> If you click on a cell that is not a mine, it will reveal the number of mines in neighbor cells </p>
-    <p> A cell "neighbours" are the cells adjacent above, below, left, right, and all 4 diagonals. </p>
-    <p> If you place flags on top of all the cells containing a mine, you win </p>
-
-  <h2> Rules </h2>
-    <p> If you open a square with 0 neighboring bombs, all its neighbors will automatically open. </p>
-    <p> Enter numbers only for the dimensions of the grid and mines. </p>
-    <p> You cannot make a playing grid smaller than 2x2 and larger than 30x30. </p>
-    <p> If you provide wrong dimensions, the program will create an appropiate grid </p>
-    <p> If you provide more mines than cells, the program will create one mine less than the total amount of cells </p>
-
-  <h2> Controls </h2>
-    <p> Left click to open a cell. </p>
-    <p> To flag a mine, place the mouse over the desired cell and press the 'f' key. </p>
-    <p> To release a mine, place the mouse over the desired cell and press the 'f' key. </p>
-
-  <h2> Settings </h2>
-    <p hidden id="sizeBoundsError" style="color:red;">
-    </p>
-    <p hidden id="minesBoundsError" style="color:red;">
-    </p>
-    <p>
-       Number of rows for the grid:
-      <input type="number" id="input1" min = "2" max = "30" value="2" placeholder = "must be a number 2-30" style = "width: 165px;"/>
-    </p>
-
-    <p>
-       Number of columns for the grid:
-      <input type="number" id="input2" min = "2" max = "30" value="2" placeholder = "must be a number 2-30" style = "width: 165px;" />
-    </p>
-    <p>
-       Number of mines:
-      <input onfocus=checkInputs() type="number" id="input3" min = "1" max = "" placeholder = "must be at least 1" value="1" style = "width: 165px;" />
-    </p>
-    <div>
-      <input id="intenseModeInput" type="checkbox" style="display:none;">
-      <label for="intenseModeInput" >
-          <button id="intenseMode" onclick=toggleIntenseMode()>Normal Mode</button>
-      </label>
+    <h2> Rules </h2>
+      <p> If you open a square with 0 neighboring bombs, all its neighbors will automatically open. </p>
+      <p> Enter numbers only for the dimensions of the grid and mines. </p>
+      <p> Grid sizes range from 2x2 to 30x30. </p>
+    
+    <h2> Controls </h2>
+      <p> Left click to reveal a cell. </p>
+      <p> Right click to flag/unflag a mine. </p>
     </div>
-    <div><br>
-      <input id="cheatModeInput" type="checkbox" style="display:none;">
-      <label for="cheatModeInput" >
-          <button id="cheatMode" onclick=toggleCheats()>CHEATS OFF</button>
-      </label>
-    </div><br>
-    <button onclick="setup()">Play</button>
-   <p> </p>
+    <div hidden class="isIntense" id="intenseRules">
+      <h2 class="isIntense"> INTENSE MODE </h2>
+      <p class="isIntense"> Mines re-shuffle every time a space is revealed. </p>
+      <p class="isIntense"> Hype music for setting. </p>
+      <p class="isIntense"> Screen shakes to throw you off your game. </p>  
+    </div>
+    <div id="settings">
+      <h2> Settings </h2>
+      <p hidden id="sizeBoundsError" style="color:red;">
+      </p>
+      <p hidden id="minesBoundsError" style="color:red;">
+      </p>
+      <p>
+        Number of rows for the grid:
+        <input type="number" id="input1" min = "2" max = "30" value="2" placeholder = "must be a number 2-30" style = "width: 165px;"/>
+      </p>
 
-    <div id="canvas-holder">
-      <!-- Our canvas goes here -->
+      <p>
+        Number of columns for the grid:
+        <input type="number" id="input2" min = "2" max = "30" value="2" placeholder = "must be a number 2-30" style = "width: 165px;" />
+      </p>
+      <p>
+        Number of mines:
+        <input onfocus=checkInputs() type="number" id="input3" min = "1" max = "" placeholder = "must be at least 1" value="1" style = "width: 165px;" />
+      </p>
+      <div>
+        <input id="intenseModeInput" type="checkbox" style="display:none;">
+        <label for="intenseModeInput" >
+            <button id="intenseMode" onclick=toggleIntenseMode()>Normal Mode</button>
+        </label>
+      </div><br>
+      <div>
+        <input id="cheatModeInput" type="checkbox" style="display:none;">
+        <label for="cheatModeInput" >
+            <button id="cheatMode" onclick=toggleCheats()>Cheats Off</button>
+        </label>
+      </div><br>
+      <button onclick="setup()">Play</button>
+    <p> </p>
     </div>
 
-    <p> <span id="flagsLeft"></span> </p>
+      <div id="canvas-holder">
+        <!-- Our canvas goes here -->
+      </div>
+
+      <p class="isIntense"> <span id="flagsLeft"></span> </p>
+  </main>
+  
 
     <!-- JavaScript -->
 		<script type="text/javascript" src="js/musicFunctions.js"></script>
