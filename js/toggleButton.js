@@ -15,7 +15,7 @@ function toggleIntenseMode() {
     let checkBox = document.getElementById("intenseModeInput");
     let titleText = document.getElementById('bigText');
     if (button.innerText==="Normal Mode") {
-        titleText.innerHTML = "SUPER DUPER CRAZY INSANE INTENSE MINESWEEPER WOW";
+        titleText.innerHTML = "SUPER CRAZY LUDICROUS INTENSE MINESWEEPER WOW";
         shakeIt();
         button.innerText = "INTENSE MODE!!";
         button.style.backgroundColor = "red";
