@@ -1,11 +1,13 @@
 /**
  *  @fileOverview Interface of Minesweeper
- *
+ *  
+ *  @author       Jacob Marshall
  *  @author       Ian Farris
  *  @author       Thor Lyche
  *  @author       Robert Nickel
  *  @author       Tony Nguyen
  *  @author       Emilia Paz
+ *  
  */
 
 /** ------------Global variables ------------ */
