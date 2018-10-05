@@ -291,6 +291,11 @@ function mousePressed() {
     else if (mouseButton === RIGHT) {
         flag(x,y);
     }
+    if(isIntense()){
+        if(Math.floor(Math.random() * 20) === 15 ){
+            spinIt();
+        }
+    }
 }
 
 /**
@@ -333,8 +338,8 @@ function stopAnimation(){
 function spinIt(){
     //you spin me right round
     canvas = document.getElementById('defaultCanvas0');
-    canvas.style.animation = 'spin 30s';
-    canvas.style.animationIterationCount = 'infinite';
+    canvas.style.animation = 'spin 2s';
+    canvas.style.animationIterationCount = 'once';
 
 }
 
