@@ -65,15 +65,15 @@ Box.prototype.show = function() {
             // yellow 1
             fill(255, 235, 59);
             beginShape();
-            vertex( this.x + this.w / 2 + 2, this.y + 3); //top right
-            vertex( this.x + this.w / 2 + 2, this.y + this.w * 3 / 4); //right trunk meets base
-            vertex( this.x + this.w / 2 + 8, this.y + this.w * 3 / 4); //right base top
-            vertex( this.x + this.w / 2 + 8, this.y + this.w * 3 / 4 + 3); //right base bottom
-            vertex( this.x + this.w / 2 - 8, this.y + this.w * 3 / 4 + 3); //left base bottom
-            vertex( this.x + this.w / 2 - 8, this.y + this.w * 3 / 4); //left base top
-            vertex( this.x + this.w / 2 - 2, this.y + this.w * 3 / 4); //left trunk meets base
-            vertex( this.x + this.w / 2 - 2, this.y + this.w / 4); // leaf meets trunk bottom
-            vertex( this.x + this.w / 2 - 8, this.y + this.w / 4); //leaf point
+            vertex( this.x + this.w / 2 + this.w * (2 / 30), this.y + this.w * (3/30)); //top right
+            vertex( this.x + this.w / 2 + this.w * (2 / 30), this.y + this.w * 3 / 4); //right trunk meets base
+            vertex( this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * 3 / 4); //right base top
+            vertex( this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //right base bottom
+            vertex( this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //left base bottom
+            vertex( this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4); //left base top
+            vertex( this.x + this.w / 2 - this.w * (2 / 30), this.y + this.w * 3 / 4); //left trunk meets base
+            vertex( this.x + this.w / 2 - this.w * (2 / 30), this.y + this.w / 4); // leaf meets trunk bottom
+            vertex( this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w / 4); //leaf point
             endShape(CLOSE);
         }
         else if(this.count==2){
