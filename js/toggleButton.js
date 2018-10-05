@@ -56,17 +56,16 @@ function toggleCheats(){
     let checkBox = document.getElementById("cheatModeInput");
     if(cheating === true){
         cheating = false;
-        button.innerText = "CHEATS OFF";
+        button.innerText = "Cheats Off";
         button.style.backgroundColor = "#ffce00";
         checkBox.checked = false;
     }
     else{
         cheating = true;
-        button.innerText = "CHEATS ON";
+        button.innerText = "Cheats On";
         button.style.backgroundColor = "red";
         checkBox.checked = true;
     }
-    console.log("toggled");
     for(x = 0; x < cols; x++){
         for(y = 0; y < rows; y++){
             if(cheating === true){
