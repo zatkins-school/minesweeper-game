@@ -80,17 +80,17 @@ Box.prototype.show = function() {
             // light green
             fill(190, 220, 57);
             beginShape();
-            vertex(this.x + this.w / 2 + 9, this.y + this.w * 3 / 4 + 3); //base right bottom
-            vertex(this.x + this.w / 2 - 8, this.y + this.w * 3 / 4 + 3); //base left bottom
-            vertex(this.x + this.w / 2 - 8, this.y + this.w * 3 / 4 - 2); //base left top
-            vertex(this.x + this.w / 2 + 4, this.y + this.w / 2); //middle right inside
-            vertex(this.x + this.w / 2, this.y + 7); //top point inside
-            vertex(this.x + this.w / 2 - 8, this.y + 7); //top left point inside
-            vertex(this.x + this.w / 2 - 8, this.y + 3); //top left point outside
-            vertex(this.x + this.w / 2 + 2, this.y + 3); //top point top
-            vertex(this.x + this.w / 2 + 9, this.y + this.w / 2 + 1); //right point right
-            vertex(this.x + this.w / 2 - 3, this.y + this.w * 3 / 4); //base left inside
-            vertex(this.x + this.w / 2 + 9, this.y + this.w * 3 / 4); //base right top
+            vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //base right bottom
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //base left bottom
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 - this.w * (2 / 30)); //base left top
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2); //middle right inside
+            vertex(this.x + this.w / 2, this.y + this.w * (7 / 30)); //top point inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (7 / 30)); //top left point inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //top left point outside
+            vertex(this.x + this.w / 2 + this.w * (2 / 30), this.y + this.w * (3 / 30)); //top point top
+            vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w / 2 + this.w * (1 / 30)); //right point right
+            vertex(this.x + this.w / 2 - this.w * (3 / 30), this.y + this.w * 3 / 4); //base left inside
+            vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w * 3 / 4); //base right top
             endShape(CLOSE);
 
         }
@@ -98,109 +98,109 @@ Box.prototype.show = function() {
             // dark green
             fill(76, 175, 80);
             beginShape();
-            vertex(this.x + this.w / 2 - 8, this.y + 3); //top left outside
-            vertex(this.x + this.w / 2 + 8, this.y + 3); //top right outside
-            vertex(this.x + this.w / 2, this.y + this.w / 2 - 4); //middle left inside
-            vertex(this.x + this.w / 2 + 8, this.y + this.w / 2 - 4); //middle right outside
-            vertex(this.x + this.w / 2 + 8, this.y + this.w * 3 / 4 + 3); //bottom right outside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w * 3/4 + 3); //bottom left outside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w * 3/4 -1); //bottom left inside
-            vertex(this.x + this.w / 2 + 4, this.y + this.w * 3 / 4 - 1); //bottom right inside
-            vertex(this.x + this.w / 2 + 4, this.y + this.w / 2); //middle right inside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w / 2); //middle left outside
-            vertex(this.x + this.w / 2, this.y + 7); //top right inside
-            vertex(this.x + this.w / 2 - 8, this.y + 7); //top left inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //top left outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * (3 / 30)); //top right outside
+            vertex(this.x + this.w / 2, this.y + this.w / 2 - this.w * (4 / 30)); //middle left inside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2 - this.w * (4 / 30)); //middle right outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //bottom right outside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3/4 + this.w * (3 / 30)); //bottom left outside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3/4 -1); //bottom left inside
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w * 3 / 4 - this.w * (1 / 30)); //bottom right inside
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2); //middle right inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w / 2); //middle left outside
+            vertex(this.x + this.w / 2, this.y + this.w * (7 / 30)); //top right inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (7 / 30)); //top left inside
             endShape(CLOSE);
         }
         else if(this.count==4){
             // light blue
             fill(0, 188, 212  );
             beginShape();
-            vertex(this.x + this.w / 2 + 4, this.y + this.w * 3 / 4 + 3); //base right
-            vertex(this.x + this.w / 2 + 4, this.y + 3); //top outside right
-            vertex(this.x + this.w / 2, this.y + 3); //top outside left
-            vertex(this.x + this.w / 2 - 8, this.y + this.w / 2); //left outside top
-            vertex(this.x + this.w / 2 - 8, this.y + this.w / 2 + 4); //left outside bottom
-            vertex(this.x + this.w / 2 + 8, this.y + this.w / 2 + 4); //right bottom
-            vertex(this.x + this.w / 2 + 8, this.y + this.w / 2); //right top
-            vertex(this.x + this.w / 2 - 4, this.y + this.w / 2); //left inside
-            vertex(this.x + this.w / 2, this.y + 9); //top inside
-            vertex(this.x + this.w / 2, this.y + this.w * 3/4 + 3); //base left
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //base right
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w * (3 / 30)); //top outside right
+            vertex(this.x + this.w / 2, this.y + this.w * (3 / 30)); //top outside left
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w / 2); //left outside top
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w / 2 + this.w * (4 / 30)); //left outside bottom
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2 + this.w * (4 / 30)); //right bottom
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2); //right top
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w / 2); //left inside
+            vertex(this.x + this.w / 2, this.y + this.w * (9 / 30)); //top inside
+            vertex(this.x + this.w / 2, this.y + this.w * 3/4 + this.w * (3 / 30)); //base left
             endShape(CLOSE);
         }
         else if(this.count==5){
             // blue
             fill(33, 150, 243);
             beginShape();
-            vertex(this.x + this.w / 2 + 9, this.y + 3); //base right bottom
-            vertex(this.x + this.w / 2 - 8, this.y + 3); //base left bottom
-            vertex(this.x + this.w / 2 - 8, this.y + 8); //base left top
-            vertex(this.x + this.w / 2 + 4, this.y + this.w / 2 + 1); //middle right inside
-            vertex(this.x + this.w / 2, this.y + this.w * 3 / 4 + 3); //top point inside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w * 3 / 4 + 3); //top left point inside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w * 3 / 4 + 7); //top left point outside
-            vertex(this.x + this.w / 2 + 3, this.y + this.w * 3 / 4 + 7); //top point top
-            vertex(this.x + this.w / 2 + 9, this.y + this.w / 2); //right point right
-            vertex(this.x + this.w / 2 - 3, this.y + 7); //base left inside
-            vertex(this.x + this.w / 2 + 9, this.y + 7); //base right top
+            vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w * (3 / 30)); //base right bottom
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //base left bottom
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (8 / 30)); //base left top
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2 + this.w * (1 / 30)); //middle right inside
+            vertex(this.x + this.w / 2, this.y + this.w * 3 / 4 + this.w * (3 / 30)); //top point inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (3 / 30)); //top left point inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * 3 / 4 + this.w * (7 / 30)); //top left point outside
+            vertex(this.x + this.w / 2 + this.w * (3 / 30), this.y + this.w * 3 / 4 + this.w * (7 / 30)); //top point top
+            vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w / 2); //right point right
+            vertex(this.x + this.w / 2 - this.w * (3 / 30), this.y + this.w * (7 / 30)); //base left inside
+            vertex(this.x + this.w / 2 + this.w * (9 / 30), this.y + this.w * (7 / 30)); //base right top
             endShape(CLOSE);
         }
         else if(this.count==6){
             // dark blue
             fill(63, 81, 181);
             beginShape();
-            vertex(this.x + this.w / 2 + 8, this.y + 3); //top right outside
-            vertex(this.x + this.w / 2 - 8, this.y + 3); //top left outside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w - 3); //bottom left outside
-            vertex(this.x + this.w / 2 + 8, this.y + this.w - 3); //bottom right outside
-            vertex(this.x + this.w / 2 + 8, this.y + this.w / 2 - 2); //middle right outside
-            vertex(this.x + this.w / 2 - 4, this.y + this.w / 2 - 2); //middle left top
-            vertex(this.x + this.w / 2 - 4, this.y + this.w / 2 + 2); //middle left bottom
-            vertex(this.x + this.w / 2 + 4, this.y + this.w / 2 + 2); //middle right inside
-            vertex(this.x + this.w / 2 + 4, this.y + this.w - 7); //bottom right inside
-            vertex(this.x + this.w / 2 - 4, this.y + this.w - 7); //bottom left inside
-            vertex(this.x + this.w / 2 - 4, this.y + 7); //top left inside
-            vertex(this.x + this.w / 2 + 8, this.y + 7); //top right inside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * (3 / 30)); //top right outside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //top left outside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w - this.w * (3 / 30)); //bottom left outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w - this.w * (3 / 30)); //bottom right outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w / 2 - this.w * (2 / 30)); //middle right outside
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w / 2 - this.w * (2 / 30)); //middle left top
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w / 2 + this.w * (2 / 30)); //middle left bottom
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2 + this.w * (2 / 30)); //middle right inside
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom right inside
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom left inside
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w * (7 / 30)); //top left inside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * (7 / 30)); //top right inside
             endShape(CLOSE);
         }
         else if(this.count==7){
             // purple
             fill(103, 58, 183);
             beginShape();
-            vertex(this.x + this.w / 2 - 8, this.y + 3); //top left outside
-            vertex(this.x + this.w / 2 + 8, this.y + 3); //top right outside
-            vertex(this.x + this.w / 2 + 2, this.y + this.w - 3); //bottom right
-            vertex(this.x + this.w / 2 - 3, this.y + this.w - 3); //bottom left
-            vertex(this.x + this.w / 2 + 2, this.y + 7); //top right inside
-            vertex(this.x + this.w / 2 - 8, this.y + 7); //top left inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //top left outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * (3 / 30)); //top right outside
+            vertex(this.x + this.w / 2 + this.w * (2 / 30), this.y + this.w - this.w * (3 / 30)); //bottom right
+            vertex(this.x + this.w / 2 - this.w * (3 / 30), this.y + this.w - this.w * (3 / 30)); //bottom left
+            vertex(this.x + this.w / 2 + this.w * (2 / 30), this.y + this.w * (7 / 30)); //top right inside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (7 / 30)); //top left inside
             endShape(CLOSE);
         }
         else if(this.count==8){
             // pink
             fill(170, 44, 192);
             beginShape();
-            vertex(this.x + this.w / 2 + 8, this.y + 3); //top right outside
-            vertex(this.x + this.w / 2 - 8, this.y + 3); //top left outside
-            vertex(this.x + this.w / 2 - 8, this.y + this.w - 3); //bottom left outside
-            vertex(this.x + this.w / 2 + 8, this.y + this.w - 3); //bottom right outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w * (3 / 30)); //top right outside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w * (3 / 30)); //top left outside
+            vertex(this.x + this.w / 2 - this.w * (8 / 30), this.y + this.w - this.w * (3 / 30)); //bottom left outside
+            vertex(this.x + this.w / 2 + this.w * (8 / 30), this.y + this.w - this.w * (3 / 30)); //bottom right outside
             endShape(CLOSE);
 
             fill(250, 250, 250);
 
             //top hole
             beginShape();
-            vertex(this.x + this.w / 2 + 4, this.y + this.w / 2 - 2); //middle right outside
-            vertex(this.x + this.w / 2 - 4, this.y + this.w / 2 - 2); //middle left top
-            vertex(this.x + this.w / 2 - 4, this.y + 7); //top left inside
-            vertex(this.x + this.w / 2 + 4, this.y + 7); //top right inside
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2 - this.w * (2 / 30)); //middle right outside
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w / 2 - this.w * (2 / 30)); //middle left top
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w * (7 / 30)); //top left inside
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w * (7 / 30)); //top right inside
             endShape(CLOSE);
 
             //bottom hole
             beginShape();
-            vertex(this.x + this.w / 2 - 4, this.y + this.w / 2 + 2); //middle left bottom
-            vertex(this.x + this.w / 2 + 4, this.y + this.w / 2 + 2); //middle right inside
-            vertex(this.x + this.w / 2 + 4, this.y + this.w - 7); //bottom right inside
-            vertex(this.x + this.w / 2 - 4, this.y + this.w - 7); //bottom left inside
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w / 2 + this.w * (2 / 30)); //middle left bottom
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w / 2 + this.w * (2 / 30)); //middle right inside
+            vertex(this.x + this.w / 2 + this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom right inside
+            vertex(this.x + this.w / 2 - this.w * (4 / 30), this.y + this.w - this.w * (7 / 30)); //bottom left inside
            endShape(CLOSE);
         }
         else{
@@ -213,9 +213,9 @@ Box.prototype.show = function() {
     else if (this.flagged){
         //flag
         fill(179, 0, 0);
-        triangle(this.x + this.w/2, this.y + 2, this.x + this.w, this.y + this.w/2, this.x + this.w/2, this.y + this.w/2);
+        triangle(this.x + this.w/2, this.y + this.w * (2 / 30), this.x + this.w, this.y + this.w/2, this.x + this.w/2, this.y + this.w/2);
         fill(0,0,0);
-        quad(this.x + this.w/2, this.y + 2, this.x + this.w/2 - 4, this.y + 2, this.x + this.w/2 - 4, this.y + this.w - 2, this.x + this.w/2, this.y + this.w - 2);
+        quad(this.x + this.w/2, this.y + this.w * (2 / 30), this.x + this.w/2 - this.w * (4 / 30), this.y + this.w * (2 / 30), this.x + this.w/2 - this.w * (4 / 30), this.y + this.w - this.w * (2 / 30), this.x + this.w/2, this.y + this.w - this.w * (2 / 30));
     }
 
 }
