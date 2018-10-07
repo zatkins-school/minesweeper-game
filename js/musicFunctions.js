@@ -1,5 +1,6 @@
 /**
  * @fileOverview Implementation of the music functions
+ * @author Thomas Gartman
 */
 
 /** ------------Global variable ------------ */

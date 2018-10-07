@@ -286,6 +286,33 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#audioCreator">audioCreator</a></b>()
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#audioStopper">audioStopper</a></b>()
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#checkInputs">checkInputs</a></b>()
+								</div>
+								<div class="description">Takes in the provided board size and mine count from the user and validates that against the set boundaries</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#create2DArray">create2DArray</a></b>(cols, rows)
 								</div>
 								<div class="description">Creates a 2D Array according to the cols and rows given</div>
@@ -304,9 +331,27 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#flag">flag</a></b>(x, y)
+								</div>
+								<div class="description">Places a flags where the mouse is located when f is released</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#generate_playing_field">generate_playing_field</a></b>(number_of_mines, rows, cols, multi_array)
 								</div>
 								<div class="description">Adds adjacent numbers to the playing grid</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#getMineMax">getMineMax</a></b>()
+								</div>
+								<div class="description">calculates the maximum number of mines based on current input</div>
 							</td>
 						</tr>
 					
@@ -322,18 +367,9 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont"><b><a href="../symbols/_global_.html#keyReleased">keyReleased</a></b>()
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#isIntense">isIntense</a></b>()
 								</div>
-								<div class="description">Places a flags where the mouse is located when f is released</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont"><b><a href="../symbols/_global_.html#lose">lose</a></b>()
-								</div>
-								<div class="description">Let's user know that the game is lost and resets the game</div>
+								<div class="description">returns current intenseMode state</div>
 							</td>
 						</tr>
 					
@@ -349,9 +385,45 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont"><b><a href="../symbols/_global_.html#mouseClicked">mouseClicked</a></b>()
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#mine_shuffle">mine_shuffle</a></b>(multi_array)
 								</div>
-								<div class="description">Changes the box implementation when it is clicked  the number of mines adjacent to that spot will appear.</div>
+								<div class="description">This function shuffles the mines among the unrevealed spaces left on the board.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#minesError">minesError</a></b>()
+								</div>
+								<div class="description">displays error text for mines bound checking</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#mousePressed">mousePressed</a></b>()
+								</div>
+								<div class="description">Changes the box implementation when it is revealed  the number of mines adjacent to that spot will appear.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#reset">reset</a></b>()
+								</div>
+								<div class="description">Resets global variables</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#reveal">reveal</a></b>(x, y)
+								</div>
+								<div class="description">Reveals a space clicked on by the user</div>
 							</td>
 						</tr>
 					
@@ -370,6 +442,65 @@ ul.inheritsList
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#setup">setup</a></b>()
 								</div>
 								<div class="description">Creates a canvas with a 2D array according to the input</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#shakeIt">shakeIt</a></b>()
+								</div>
+								<div class="description">Begins the shaking animation</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#sizeError">sizeError</a></b>()
+								</div>
+								<div class="description">displays error text for size bound checking</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#spinIt">spinIt</a></b>()
+								</div>
+								<div class="description">Begins the spinning animation</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#stopAnimation">stopAnimation</a></b>()
+								</div>
+								<div class="description">Cease all animations</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#toggleCheats">toggleCheats</a></b>()
+								</div>
+								<div class="description">toggles button text and checkbox state for cheats
+
+toggles cheats enabled and ghost-reveals all spaces</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#toggleIntenseMode">toggleIntenseMode</a></b>()
+								</div>
+								<div class="description">toggles button text and checkbox state between
+normal and intense mode
+
+toggles intense mode</div>
 							</td>
 						</tr>
 					
@@ -420,7 +551,7 @@ ul.inheritsList
 						Creates a 2D Array with the cols and rows given
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
 						
 						
 					</div>
@@ -445,7 +576,7 @@ ul.inheritsList
 						-1 accounts for starting at 1
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -470,7 +601,7 @@ ul.inheritsList
 						Gets the dimensions from the user
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
 						
 						
 					</div>
@@ -492,6 +623,90 @@ ul.inheritsList
 					Method Detail
 				</div>
 				
+					<a name="audioCreator"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>audioCreator</b>()
+					
+					</div>
+					<div class="description">
+						
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_musicFunctions.js.html">musicFunctions.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="audioStopper"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>audioStopper</b>()
+					
+					</div>
+					<div class="description">
+						
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_musicFunctions.js.html">musicFunctions.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="checkInputs"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>checkInputs</b>()
+					
+					</div>
+					<div class="description">
+						Takes in the provided board size and mine count from the user and validates that against the set boundaries
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
 					<a name="create2DArray"> </a>
 					<div class="fixedFont">
 					
@@ -503,7 +718,7 @@ ul.inheritsList
 						Creates a 2D Array according to the cols and rows given
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
 						
 						
 					</div>
@@ -555,13 +770,65 @@ ul.inheritsList
 						Draws the canvas on the site by calling the show function on each box
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
 						
 						
 					</div>
 					
 					
 					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="flag"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>flag</b>(x, y)
+					
+					</div>
+					<div class="description">
+						Places a flags where the mouse is located when f is released
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>x</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<b>y</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
 						
 						
 						
@@ -590,7 +857,7 @@ ul.inheritsList
 						Adds adjacent numbers to the playing grid
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -636,6 +903,41 @@ ul.inheritsList
 
 					<hr />
 				
+					<a name="getMineMax"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{number}</span>
+					<b>getMineMax</b>()
+					
+					</div>
+					<div class="description">
+						calculates the maximum number of mines based on current input
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> rows*cols-1, max number of mines</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
 					<a name="is_within_bounds"> </a>
 					<div class="fixedFont">
 					
@@ -647,7 +949,7 @@ ul.inheritsList
 						checks to see if a given index of a 2d array is within that array's bounds
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -700,18 +1002,18 @@ ul.inheritsList
 
 					<hr />
 				
-					<a name="keyReleased"> </a>
+					<a name="isIntense"> </a>
 					<div class="fixedFont">
 					
 					
-					<b>keyReleased</b>()
+					<b>isIntense</b>()
 					
 					</div>
 					<div class="description">
-						Places a flags where the mouse is located when f is released
+						returns current intenseMode state
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
 						
 						
 					</div>
@@ -726,48 +1028,9 @@ ul.inheritsList
 							<dl class="detailList">
 							<dt class="heading">Returns:</dt>
 							
-								<dd>none</dd>
+								<dd>checked state of intenseModeInput</dd>
 							
 							</dl>
-						
-						
-						
-
-					<hr />
-				
-					<a name="lose"> </a>
-					<div class="fixedFont">
-					
-					
-					<b>lose</b>()
-					
-					</div>
-					<div class="description">
-						Let's user know that the game is lost and resets the game
-						
-							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{none}</span> <b></b>
-									
-								</dt>
-								<dd></dd>
-							
-							</dl>
-						
-						
-						
-						
 						
 						
 						
@@ -785,7 +1048,7 @@ ul.inheritsList
 						this first creates an array of unique random numbers less than the floor of rows*colswhen isFull=true the array of mine locations is full, its time to put them in!The triple nested for-loop places all the mines in place. We chose to use a "9"to represent a 9 because all spaces around it =1 plus it is a mine so 8+1=9
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -831,25 +1094,172 @@ ul.inheritsList
 
 					<hr />
 				
-					<a name="mouseClicked"> </a>
+					<a name="mine_shuffle"> </a>
 					<div class="fixedFont">
 					
 					
-					<b>mouseClicked</b>()
+					<b>mine_shuffle</b>(multi_array)
 					
 					</div>
 					<div class="description">
-						Changes the box implementation when it is clicked  the number of mines adjacent to that spot will appear. If they have flagged every
-mine, they win
+						This function shuffles the mines among the unrevealed spaces left on the board.
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
 					
 					
 					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{array}</span> <b>multi_array</b>
+									
+								</dt>
+								<dd>- the grid of the game</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="minesError"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>minesError</b>()
+					
+					</div>
+					<div class="description">
+						displays error text for mines bound checking
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="mousePressed"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>mousePressed</b>()
+					
+					</div>
+					<div class="description">
+						Changes the box implementation when it is revealed  the number of mines adjacent to that spot will appear. If they have flagged every
+mine, they win
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="reset"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>reset</b>()
+					
+					</div>
+					<div class="description">
+						Resets global variables
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="reveal"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>reveal</b>(x, y)
+					
+					</div>
+					<div class="description">
+						Reveals a space clicked on by the user
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>x</b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<b>y</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
 						
 						
 						
@@ -878,7 +1288,7 @@ mine, they win
 						Reveals boxes around grid [y,x] that are spaces, and for each space has a recursive call to reveal its spaces
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -941,7 +1351,7 @@ mine, they win
 						Creates a canvas with a 2D array according to the input
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/interface.js.html">interface.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
 						
 						
 					</div>
@@ -952,6 +1362,214 @@ mine, they win
 						
 						
 						
+						
+						
+						
+
+					<hr />
+				
+					<a name="shakeIt"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>shakeIt</b>()
+					
+					</div>
+					<div class="description">
+						Begins the shaking animation
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="sizeError"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>sizeError</b>()
+					
+					</div>
+					<div class="description">
+						displays error text for size bound checking
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="spinIt"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>spinIt</b>()
+					
+					</div>
+					<div class="description">
+						Begins the spinning animation
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="stopAnimation"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>stopAnimation</b>()
+					
+					</div>
+					<div class="description">
+						Cease all animations
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_interface.js.html">interface.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="toggleCheats"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>toggleCheats</b>()
+					
+					</div>
+					<div class="description">
+						toggles button text and checkbox state for cheats
+
+toggles cheats enabled and ghost-reveals all spaces
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_toggleButton.js.html">toggleButton.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="toggleIntenseMode"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>toggleIntenseMode</b>()
+					
+					</div>
+					<div class="description">
+						toggles button text and checkbox state between
+normal and intense mode
+
+toggles intense mode
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/js_toggleButton.js.html">toggleButton.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>none</dd>
+							
+							</dl>
 						
 						
 						
@@ -969,7 +1587,7 @@ mine, they win
 						this takes an x value, an array, and the current number of elements in that array.It checks (for the number of elements currently in the array) whether or not the valueis already in the array. If it is then it returns false, if it is not it returns true.
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -1027,7 +1645,7 @@ mine, they win
 						Let's user know that the game is finished and resets the game
 						
 							<br />
-							<i>Defined in: </i> <a href="../symbols/src/implementation.js.html">implementation.js</a>.
+							<i>Defined in: </i> <a href="../symbols/src/js_implementation.js.html">implementation.js</a>.
 						
 						
 					</div>
@@ -1092,7 +1710,7 @@ mine, they win
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Sep 23 2018 13:52:55 GMT-0500 (CDT)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Sun Oct 07 2018 14:54:25 GMT-0500 (CDT)
 		</div>
 	</body>
 </html>
